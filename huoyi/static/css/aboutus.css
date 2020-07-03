@@ -1,4 +1,8 @@
 /*关于我们*/
+
+.about-intro{
+    padding: 1.25rem 2.05rem 1.25rem 0;
+}
 .mid-content {
     padding-top: 116px;
     padding-bottom: 54px;
@@ -20,11 +24,17 @@
     font-weight: bolder;
     letter-spacing: 30px;
 }
+
+.about-banner-title img{
+    width: auto;
+    max-width: 250px;
+}
 .card-title {
     color: #F64A00;
     font-weight: 600;
     /*letter-spacing: 6px;*/
     font-size: 32px;
+    letter-spacing: 1px;
 }
 .card-text{
     color: #BABABA;
@@ -33,26 +43,34 @@
     font-family: initial;
 }
 .card-intro{
-    color: #605E5F;
-    font-size: 20px;
-    /*font-weight: ;*/
     font-family:"Microsoft YaHei Regular";
-    text-indent: 44px;
+    text-indent: 28px;
     margin-right: -5px;
+    font: 14px/20px 'Microsoft YaHei';
+    color: rgba(0, 0, 0, 0.5) !important;
+    line-height: 24px;
 }
 
 .img-boxs{
     padding: 1.25rem;
+    overflow: hidden;
+}
+
+.img-boxs img{
+    float: right;
 }
 .block-2 strong{
     font-size: 56px;
     color: #605E5F;
 }
+.row.block-2 .h2{
+    margin: 1.25rem!important;
+}
 .block-intro{
-    font-size: 18px;
-    color: #727272;
     width: 60%;
     margin: 0 auto;
+    color: rgba(0, 0, 0, 0.5) !important;
+    font: 14px/20px 'Microsoft YaHei';
 }
 .quater-wrap{
     overflow: hidden;
@@ -71,14 +89,16 @@
 .quater-intro-font{
     width: 100%;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     position: absolute;
-    top: 50%;
+    top: 13%;
     transform: translateY(-50%);
+    text-align: initial;
+    padding: 0 18px;
 }
 .quater-block:hover .quater-mask{
-    top: 0;
+    /*top: 0;*/
 }
 .quater-mask{
     height: 100%;
@@ -88,14 +108,23 @@
     color: #ffffff;
     position: absolute;
     top: -100%;
-    padding: 30% 5%;
+    padding: 8% 5%;
     transition: all 0.5s;
 }
+.quater-block:nth-child(3) .quater-mask{
+    top: 0%;
+}
+
 .hover-font-title{
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    /*text-align: initial;*/
+    padding: 0 18px;
 }
 .hover-font-intro{
     font-size: 14px;
+    margin-bottom: 3.5rem;
 }
 .hover-hot-link{
     width: 100%;
@@ -104,10 +133,10 @@
     width: 50px;
     height: 50px;
     padding: 5px;
-    margin: 5px;
+    margin: 2px;
     display: inline-block;
     background-color: #EC4300;
-    background-size: 80%;
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
 }
