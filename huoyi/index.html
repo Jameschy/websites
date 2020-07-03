@@ -851,9 +851,9 @@
 
     var galleryThumbs = new Swiper('.swiper-info', {
         direction: 'vertical',
-        slidesPerView: 5.5,
+        slidesPerView : 5.5,
         // centeredSlides : true,
-        initialSlide: 1,
+        initialSlide :1,
         loop: false,
         freeMode: true,
         watchSlidesVisibility: true,
@@ -867,8 +867,9 @@
 
     var galleryTop = new Swiper('.swiper-banner', {
         spaceBetween: 1,
-        autoplay: false,
-        loop: true,
+        autoplay:true,
+        loop:true,
+        keyboard : true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -879,21 +880,20 @@
         },
         pagination: {
             el: '.swiper-pagination',
-            clickable: true,
+            clickable :true,
         },
+        autoplay: {
+            disableOnInteraction: false,
+        }
     });
 
 
-    var swiper = new Swiper('.mSlide-inbox', {
+    var mswiper = new Swiper('.mSlide-inbox', {
         slidesPerView: 2.25,
         spaceBetween: 10,
         initialSlide: 2,//默认第三页
         centeredSlides: true,//居中
-        // init: false,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        loop: true,
         breakpoints: {
             '@0.00': {
                 slidesPerView: 2.25,
@@ -912,6 +912,8 @@
                 spaceBetween: 50,
             },
         }
+
     });
+
 </script>
 </html>
