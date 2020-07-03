@@ -1,0 +1,129 @@
+.breadcrumb{
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+}
+.search-box{
+    background-color: #ffffff;
+    padding: 15px;
+}
+
+.block-title{
+    border-bottom:1px solid #F0F0F0;
+    padding-bottom: 32px;
+}
+.search-name{
+    border-bottom: 2px solid #EF5F6D;
+    padding-bottom: 5px;
+    padding-right: 65px;
+}
+.search-result{
+    font-size: 14px;
+}
+.classify-container {
+    padding: 5px 0;
+    margin: 0 0px;
+    border-bottom: 1px solid #F0F0F0;
+}
+.classify-container .classify-name,
+.classify-container .classify-item{
+    display: inline-block;
+    line-height: 34px;
+}
+.classify-container .classify-name{
+    width: 8%;
+}
+.classify-container .classify-item{
+    width: 92%;
+    line-height: 34px;
+}
+.classify-container .classify-item a{
+    color: #333;
+    padding: 3px 15px;
+    background-color: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin: 1px 5px;
+    min-width: 72px;
+    text-align: center;
+    display: inline-block;
+    line-height: 16px;
+    border-radius: 3px;
+}
+.classify-container .selected{
+    background-color: #EEEEEE!important;
+    font-weight: 700;
+    color: #333!important;
+}
+.search-breif{
+    width: 100%;
+    padding: 10px;
+    background-color: #FAFAFA;
+    margin-bottom: 0;
+    border: none;
+}
+.result-container{
+    padding: 15px 15px;
+}
+.result-container ul,
+.result-container li{
+    width: 100%;
+}
+.result-container ul li {
+    padding: 10px 0px;
+    margin: 5px auto;
+    border-bottom: 1px solid #F0F0F0;
+}
+.result-container .result-faceimg,
+.result-container .result-detail{
+    display: inline-block;
+}
+.result-container .result-faceimg{
+    width: 10%;
+}
+.result-container .result-faceimg img{
+    width: 100%;
+}
+.result-container .result-detail{
+    width: 88%;
+    margin-left: 2%;
+}
+.result-detail p{
+    margin-bottom: 5px;
+}
+.detail-comment span {
+    margin-right: 20px;
+}
+.detail-name {
+    font-size: 18px;
+    font-weight: 800;
+}
+.detail-slogen,
+.detail-comment,
+.detail-breif,
+.button-box{
+    color: #999;
+    font-size: 14px;
+}
+.detail-slogen span,
+.detail-comment span,
+.detail-breif span,
+.button-box span{
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+.detail-slogen {
+    margin-left: 15px;
+    color: #999;
+}
+.button-box a {
+    display: inline-block;
+    padding: 3px 25px;
+    background-color: #FAFAFA;
+    border: 1px solid #F0F0F0;
+    color: #666;
+    margin: 5px 10px;
+}
