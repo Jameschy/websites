@@ -1,8 +1,7 @@
 # 工具集合，
 Javascript函数、CSS动画、Meta处理
 
-常用jQ引用地址
-http://www.jq22.com/jquery-info122
+[JQ在线引用版本](http://www.jq22.com/jquery-info122 "JQ在线引用版本")
 
 ```
 //返回星期
