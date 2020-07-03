@@ -1,0 +1,163 @@
+/*关于我们*/
+.mid-content {
+    padding-top: 60px;
+    /*padding-bottom: 54px;*/
+}
+.about-banner{
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../images/cbanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-banner-title{
+    position: relative;
+    top: 50%; /*偏移*/
+    transform: translateY(-70%);
+    color: #fff;
+    font-size: 72px;
+    font-weight: bolder;
+    letter-spacing: 30px;
+}
+.joinus-intro{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    color: #626262;
+}
+.joinus-adimg{
+    width: 100%;
+    margin-bottom: 9px;
+}
+.joinus-adimg p{
+    position: relative;
+    margin-bottom: -25px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #F64B00;
+    line-height: 70px;
+}
+/*.mid-content .col-6{*/
+    /*!*padding: 30px;*!*/
+    /*!*margin-right: 20px;*!*/
+    /*!*!* width: 40%; *!*!*/
+    /*!*flex: 0 0 48.25%;*!*/
+    /*!*margin-bottom: 20px;*!*/
+/*}*/
+.bg-box{
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 32px;
+    
+}
+.col-6:nth-child(odd){
+    padding-left: 10px;
+}
+.col-6:nth-child(even){
+    padding-right: 10px;
+}
+.job-box{
+    overflow: hidden;
+}
+.bg-box{
+    width: 85%;
+}
+
+.job-box:nth-child(odd) .bg-box{
+    background-color: #E5E5E5;
+    float: left;
+}
+.job-box:nth-child(even) .bg-box{
+    background-color: #FF6D00;
+    float: right;
+}
+.jd-block,
+.jd-detail{
+
+    float: left;
+}
+
+.addBtn{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #D4D7D7;
+    position: relative;
+    cursor: pointer;
+&:hover{
+ /*// hover状态*/
+     background-color: #00C8C8;
+ }
+&.disabledBtn{
+ /*// 禁用状态*/
+     background-color: #E4E4E4;
+     cursor: not-allowed;
+ }
+}
+.addBtn::before{ // 加号的横线
+    content: '';
+    width: 8px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 7px;
+    left: 4px;
+}
+.addBtn::after{ // 加号的竖线
+    content: '';
+    width: 2px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 7px;
+}
+
+.jd-block{
+    width: 75%;
+}
+.jd-detail{
+    font-size: 60px;
+    width: 25%;
+    text-align: end;
+}
+.jd-title{
+    font-size: 50px;
+}
+
+.jd-bottom{
+    height: 530px;
+    padding-top: 60px;
+}
+
+.multi-collapse.collapse.show {
+    display: inline-block;
+}
+.jd-slogen{
+    font-size: 60px;
+    font-weight: bold;
+    color: #F64B00;
+    margin-bottom: 120px;
+    line-height: 70px;
+}
+
+.jd-msg2{
+    height: 0;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.jd-msg2-on{
+    height: auto;
+}
+
+
+.contact-msg p{
+    font-size: 20px;
+    color: #626262;
+    margin-bottom: 5px;
+}

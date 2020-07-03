@@ -1,0 +1,122 @@
+/*关于我们*/
+.mid-content {
+    padding-top: 116px;
+    padding-bottom: 54px;
+}
+.about-banner{
+    height: 680px;
+    width: 100%;
+    text-align: center;
+    background-image: url("../images/cbanner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-banner-title{
+    position: relative;
+    top: 50%; /*偏移*/
+    transform: translateY(-70%);
+    color: #fff;
+    font-size: 72px;
+    font-weight: bolder;
+    letter-spacing: 30px;
+}
+.card-title {
+    color: #F64A00;
+    font-weight: 600;
+    /*letter-spacing: 6px;*/
+    font-size: 32px;
+}
+.card-text{
+    color: #BABABA;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: initial;
+}
+.card-intro{
+    color: #605E5F;
+    font-size: 20px;
+    /*font-weight: ;*/
+    font-family:"Microsoft YaHei Regular";
+    text-indent: 44px;
+    margin-right: -5px;
+}
+
+.img-boxs{
+    padding: 1.25rem;
+}
+.block-2 strong{
+    font-size: 56px;
+    color: #605E5F;
+}
+.block-intro{
+    font-size: 18px;
+    color: #727272;
+    width: 60%;
+    margin: 0 auto;
+}
+.quater-wrap{
+    overflow: hidden;
+    clear: both;
+
+}
+.quater-wrap li{
+    width: 23.95%;
+    position: relative;
+    margin-right: 1.5%;
+}
+.quater-wrap img{
+    width: 100%;
+}
+
+.quater-intro-font{
+    width: 100%;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.quater-block:hover .quater-mask{
+    top: 0;
+}
+.quater-mask{
+    height: 100%;
+    width: 100%;
+    background-color: #FF6D00;
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: -100%;
+    padding: 30% 5%;
+    transition: all 0.5s;
+}
+.hover-font-title{
+    font-size: 20px;
+}
+.hover-font-intro{
+    font-size: 14px;
+}
+.hover-hot-link{
+    width: 100%;
+}
+.hover-hot-link a{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    background-color: #EC4300;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hover-snlink{
+    background-image: url("../images/sn.jpg");
+}
+.hover-qqlink{
+    background-image: url("../images/qq.jpg");
+}
+.hover-wxlink{
+    background-image: url("../images/wx.jpg");
+}
