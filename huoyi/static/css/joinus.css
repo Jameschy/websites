@@ -1,120 +1,204 @@
-/*关于我们*/
+/*鍏充簬鎴戜滑*/
+
+.imgVisible{
+    /*display: inline-block!important;*/
+    visibility: visible!important;
+    opacity: 1!important;
+    z-index: 100!important;
+    transition: all 5s ease-in-out;
+}
 .mid-content {
-    padding-top: 60px;
-    /*padding-bottom: 54px;*/
+    padding-top: 35px;
+    padding-bottom: 54px;
 }
 .about-banner{
-    height: 500px;
+    max-height: 500px;
     width: 100%;
+    overflow: hidden;
+}
+.join-banner{
+
+}
+.about-banner img {
     text-align: center;
-    background-image: url("../images/cbanner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
 }
 .about-banner-title{
     position: relative;
-    top: 50%; /*偏移*/
+    top: 64%; /*鍋忕Щ*/
     transform: translateY(-70%);
     color: #fff;
     font-size: 72px;
     font-weight: bolder;
     letter-spacing: 30px;
 }
+.join-bigicon{
+    width: auto;
+    max-width: 160px;
+}
 .joinus-intro{
-    width: 60%;
+    /*width: 41.5%;*/
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 40px;
     margin-bottom: 5px;
     color: #626262;
 }
 .joinus-adimg{
-    width: 100%;
-    margin-bottom: 9px;
+    width: 64%;
+    margin: 15px auto;
 }
 .joinus-adimg p{
     position: relative;
-    margin-bottom: -25px;
-    font-size: 60px;
+    margin-bottom: -5px;
+    font-size: 50px;
     font-weight: bold;
     color: #F64B00;
     line-height: 70px;
+    text-indent: 30px;
+}
+.joinus-adimg img {
+    width: 250px;
+    margin-bottom: 35px;
 }
 /*.mid-content .col-6{*/
-    /*!*padding: 30px;*!*/
-    /*!*margin-right: 20px;*!*/
-    /*!*!* width: 40%; *!*!*/
-    /*!*flex: 0 0 48.25%;*!*/
-    /*!*margin-bottom: 20px;*!*/
+/*!*padding: 30px;*!*/
+/*!*margin-right: 20px;*!*/
+/*!*!* width: 40%; *!*!*/
+/*!*flex: 0 0 48.25%;*!*/
+/*!*margin-bottom: 20px;*!*/
 /*}*/
 .bg-box{
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin-bottom: 20px;
-    padding: 32px;
-    
+    padding: 22px 32px;
 }
 .col-6:nth-child(odd){
     padding-left: 10px;
+    padding-right: 9px;
 }
 .col-6:nth-child(even){
     padding-right: 10px;
+    padding-left: 9px;
 }
 .job-box{
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 .bg-box{
-    width: 85%;
+    /*width: 490px;*/
+    /*height: 798px;*/
+    /*max-height: 900px;*/
+    transition: all 0.25s;
+    position: relative;
 }
 
 .job-box:nth-child(odd) .bg-box{
-    background-color: #E5E5E5;
+    background-color: #FF6D00;
     float: left;
 }
 .job-box:nth-child(even) .bg-box{
-    background-color: #FF6D00;
-    float: right;
+    background-color: #E5E5E5;
+    /*float: right;*/
+}
+.job-personicon{
+    position: absolute;
+    bottom: -5px;
+    right: 15px;
+    width: 160px;
+}
+.job-chaticon {
+    /*display: none;*/
+    visibility: hidden;
+    position: absolute;
+    /* left: 14%; */
+    bottom: 13%;
+    right: 42%;
+    opacity:0;
+    filter: alpha(opacity=0);
+    transition: all 0.35s ease-in-out;
+}
+.jd-clk {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
 }
 .jd-block,
 .jd-detail{
-
     float: left;
 }
 
-.addBtn{
+.bg-box:hover {
+    box-shadow: 1px 2px 9px rgba(0,0,0,.6);
+}
+.box-sd{
+    box-shadow: 1px 2px 9px rgba(0,0,0,.6);
+}
+
+.btn-on {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #D4D7D7;
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*color: #333;*/
+    /*transition: color .25s;*/
+    /*position: relative;*/
+    transition: color .25s;
     position: relative;
-    cursor: pointer;
-&:hover{
- /*// hover状态*/
-     background-color: #00C8C8;
- }
-&.disabledBtn{
- /*// 禁用状态*/
-     background-color: #E4E4E4;
-     cursor: not-allowed;
- }
+    width: 0;
+    height: 0;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 15px solid #fff;
 }
-.addBtn::before{ // 加号的横线
-    content: '';
-    width: 8px;
-    height: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 7px;
-    left: 4px;
+
+/*.btn-on::before{*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    right: 5%;*/
+/*    top: 35%;*/
+/*    width: 30px;*/
+/*    margin-left: -40px;*/
+/*    margin-top: -5px;*/
+/*    border-top: 4px solid;*/
+/*}*/
+/*.btn-y::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    right: 37%;*/
+/*    top: 80%;*/
+/*    height: 30px;*/
+/*    margin-left: -5px;*/
+/*    margin-top: -36px;*/
+/*    border-left: 4px solid;*/
+/*}*/
+
+.btn-y {
+    display: inline-block;
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*color: #333;*/
+    /*transition: color .25s;*/
+    /*position: relative;*/
+    transition: color .25s;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 0;
+    border-top: 15px solid #fff;
 }
-.addBtn::after{ // 加号的竖线
-    content: '';
-    width: 2px;
-    height: 8px;
-    background-color: #fff;
-    position: absolute;
-    top: 4px;
-    left: 7px;
+
+@keyframes bounce-down {
+    25% {transform: translateY(-3px);}
+    50%{transform: translateY(0);}
+    75% {transform: translateY(3px);}
+    100% {transform: translateY(0);}
+}
+.animate-bounce-down{
+    -webkit-animation: bounce-down 1s linear infinite;
+    animation: bounce-down 1s linear infinite;
 }
 
 .jd-block{
@@ -127,22 +211,30 @@
 }
 .jd-title{
     font-size: 50px;
+    color: rgba(0,0,0,.7);
+    margin-bottom: 10px;
 }
-
+.jd-msg{
+    font-size: 20px;
+    margin-bottom: 0;
+}
 .jd-bottom{
-    height: 530px;
-    padding-top: 60px;
+    /*height: 530px;*/
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 98%;
 }
 
 .multi-collapse.collapse.show {
     display: inline-block;
 }
 .jd-slogen{
-    font-size: 60px;
+    font-size: 46px;
     font-weight: bold;
     color: #F64B00;
-    margin-bottom: 120px;
-    line-height: 70px;
+    margin-bottom: 30px;
+    line-height: 60px;
+    margin-left: -24px;
 }
 
 .jd-msg2{
@@ -152,12 +244,16 @@
     transition: all 0.5s;
 }
 .jd-msg2-on{
+    /*height: 589px;*/
     height: auto;
+    transition: all 0.5s;
+    margin-bottom: 273px;
+
 }
 
 
 .contact-msg p{
-    font-size: 20px;
+    font-size: 16px;
     color: #626262;
     margin-bottom: 5px;
 }
