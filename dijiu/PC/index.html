@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>[!--pagetitle--]</title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static/css/public.css" rel="stylesheet" type="text/css">
+    <script src="/dijiu/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/static/js/common.js"></script>
+    [!--temp.tomb--]
+</head>
+<body>
+        <!--header开始-->
+        [!--temp.dijiu_w_header--]
+        <!--header结束-->
+
+        <!--main-->
+        <div class="main wrap">
+        	<!--热门开始-->
+            <div class="hotSoftList">
+                <div class="softList clearfix">
+
+                    [e:loop={"select * from [!db.pre!]ecms_game order by onclick desc limit 10",6,24,0}]
+					<a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>">
+                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>">
+                        <span><?=$bqr['title']?></span>
+                    </a>
+                    [/e:loop]
+
+                </div>
+                <div class="dashed-line"></div>
+                <div class="hotSoft clearfix">
+                    <div class="hslist hslist1">
+                        <span>软件</span>
+                        [e:loop={32,12,0,0}]
+                        <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>|
+                        [/e:loop]
+
+                    </div>
+                    <div class="hslist hslist2">
+                        <span>游戏</span>
+                        [e:loop={15,12,0,0}]
+                        <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>|
+                        [/e:loop]
+                    </div>
+                    <div class="hslist hslist3">
+                        <span>攻略</span>
+                        [e:loop={'1,8',5,0,0}]
+                        <a href="<?=$bqsr['titleurl']?>" target="_blank"><?=esub($bqr[title],80)?></a>|
+                        [/e:loop]
+	                </div>
+                </div>
+            </div>
+            <!--热门结束-->
+            <div class="index-zxtj clearfix">
+            	<!--最新更新开始-->
+                <div class="zxtjbox">
+                    <div class="pub-title">
+                        <span>最新更新</span>
+                        <ul class="zxtj-tab" id="zxtj-tab">
+                            <li class="cur">
+                                <a>软件下载</a>
+                            </li>
+                            <li>
+                                <a>游戏下载</a>
+                            </li>
+                            <li>
+                                <a>攻略教程</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix">
+                        <ul>
+                           
+                            [e:loop={32,18,5,0,0,'newstime desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>">
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix hide">
+                        <ul>
+
+                            [e:loop={'15',18,5,0,0,'newstime desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>">
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix hide">
+                        <ul>
+
+                            [e:loop={'25',18,5,0,0,'newstime desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>">
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+                        </ul>
+                    </div>
+                </div>
+            	<!--最新更新结束-->
+            	<!--电脑总排行榜开始-->
+                <div class="phbbox">
+                    <div class="pub-title">软件总排行榜
+                        <a href="/rjxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+
+                            [e:loop={"32",1,5,0,0,"onclick desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"32","1,7",5,0,0,"onclick desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+            	<!--电脑总排行榜结束-->
+            	<!--安卓总排行榜开始-->
+                <div class="phbbox hide">
+                    <div class="pub-title">安卓总排行榜
+                        <a href="/azxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+
+                            [e:loop={"15",1,5,0,0,"onclick desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"15","1,7",5,0,0,"onclick desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+            	<!--安卓总排行榜结束-->
+            	<!--苹果总排行榜开始-->
+                <div class="phbbox hide">
+                    <div class="pub-title">苹果总排行榜
+                        <a href="/pgxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+
+                            [e:loop={"25",1,5,0,0,"onclick desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"25","1,7",5,0,0,"onclick desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+            	<!--苹果总排行榜结束-->
+            </div>
+            <div class="index-zxtj clearfix">
+                <div class="zxtjbox">
+                    <div class="pub-title">
+                        <span>热门推荐</span>
+                        <ul class="zxtj-tab" id="zxtj-tab">
+                            <li class="cur">
+                                <a>电脑</a>
+                            </li>
+                            <li>
+                                <a>安卓</a>
+                            </li>
+                            <li>
+                                <a>苹果</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix">
+                        <ul>
+
+                            [e:loop={'32',18,5,0,'isgood=1','onclick desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>" >
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix hide">
+                        <ul>
+
+                            [e:loop={'15',18,5,0,'isgood=1','onclick desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>" >
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+
+
+                        </ul>
+                    </div>
+                    <div class="zxtj-list clearfix hide">
+                        <ul>
+
+                            [e:loop={'25',18,5,0,'isgood=1','onclick desc'}]
+                            <li>
+                                <a href="<?=$bqsr['titleurl']?>" target="_blank">
+                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>" >
+                                    <span></span>
+                                    <em><?=$bqr['title']?></em>
+                                </a>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="phbbox">
+                    <div class="pub-title">电脑月排行榜
+                        <a href="/rjxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+                            <!--[e:loop={'32',8,5,0,'newstime>UNIX_TIMESTAMP()-86400*30','onclick desc'}]-->
+                            [e:loop={"32",1,5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"32","1,7",5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="phbbox hide">
+                    <div class="pub-title">安卓月排行榜
+                        <a href="/azxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+                            [e:loop={"15",1,5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"15","1,7",5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                        </ul>
+                    </div>
+                </div>
+                <div class="phbbox hide">
+                    <div class="pub-title">苹果月排行榜
+                        <a href="/pgxz/" target="_blank" class="more">更多+</a></div>
+                    <div class="phb-list clearfix">
+                        <ul>
+
+                            [e:loop={"25",1,5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item on">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num1">1</span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                            [e:loop={"25","1,7",5,0,"newstime > UNIX_TIMESTAMP('2017-01-01') and newstime < UNIX_TIMESTAMP('2017-01-30')","newstime desc"}]
+                            <li class="phb-item">
+                                <a rel="nofollow" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" class="item-name" target="_blank">
+                                    <span class="p-num num<?=$bqno+1?>"><?=$bqno+1?></span><?=$bqr['title']?>-<?=$bqr['banben']?></a>
+                                <div class="item-info">
+                                    <img class="fl mr10" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>" >
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr[classname]?>/</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow" href="<?=$bqr['down']?>" title="<?=$bqr['title']?> <?=$bqr['banben']?>" target="_blank" class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="index-zxzt clearfix">
+                <div class="zxztbox">
+                    <div class="pub-title clearfix">
+                        <span>最新专题</span>
+                        <a href="/zt/" class="more" target="_blank">更多+</a>
+                    </div>
+                    <div class="zxzt-list clearfix">
+                        <ul>
+
+                            [e:loop={'select * from [!db.pre!]enewszt order by addtime desc limit 20',10,24,0}]
+                            <li>
+                                <a href="/<?=$bqr['ztpath']?>/" title="<?=$bqr['ztname']?>" target="_blank" class="list-img">
+                                    <img width="100%" height="100%" alt="<?=$bqr['ztname']?>" src="<?=$bqr['ztimg']?>">
+                                    <i class="img-cover"></i>
+                                    <p class="img-name"><?=$bqr['ztname']?></p></a>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="index-dnrj">
+                <div class="pub-title clearfix">
+                    <span>电脑软件</span>
+                    <a href="/rjxz/" class="more" target="_blank">更多+</a>
+                    <ul class="zxzt-tab" id="zxzt-tab">
+                        <li class="cur">
+                            <a href="/rjxz/wlgj/" target="_blank">网络工具</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/xtrj/" target="_blank">系统软件</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/srf/" target="_blank">输入法</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/ltxg/" target="_blank">聊天相关</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/jygj/" target="_blank">解压工具</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/txtx/" target="_blank">图形图像</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/mtyy/" target="_blank">媒体影音</a>
+                        </li>
+                        <li class="">
+                            <a href="/rjxz/aqsd/" target="_blank">安全杀毒</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="list-con">
+                    <div class="show">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"33",18,5,0,0,"newstime desc"}]
+                            	<li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl"><i></i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                   
+                                    [e:loop={"33",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"33","1,7",5,0,0,"onclick desc"}]
+                                      <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                    	<i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"34",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i></i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+
+                                    [e:loop={"34",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"34","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"35",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl"><i></i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                   
+                                    [e:loop={"35",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"35","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"36",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i></i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                    [e:loop={"36",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"36","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"37",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i>
+                                    </i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                    [e:loop={"37",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"37","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"38",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i>
+                                    </i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                    [e:loop={"38",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"38","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"39",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i>
+                                    </i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+                                    [e:loop={"39",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"39","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="fl left">
+                            <ul><!--18-->
+                                [e:loop={"40",18,5,0,0,"newstime desc"}]
+                                <li>
+                                    <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                        <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"></a>
+                                    <div class="fl appInfo">
+                                        <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?></a>
+                                        <a class="appLbl"><?=$bqr['daxiao']?></a>
+                                    </div>
+                                </li>
+                                [/e:loop]
+                            </ul>
+                        </div>
+                        <div class="fr right xzph">
+                            <div class="tlt-rank">
+                                <h2 class="fl">
+                                    <i>
+                                    </i>排行榜</h2>
+                            </div>
+                            <div class="dl-list clearfix">
+                                <ul class="show">
+
+                                    [e:loop={"40",1,5,0,0,"onclick desc"}]
+                                    <li class="on">
+                                        <label class="rank rank1 fl">1</label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?> "></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+                                    [e:loop={"40","1,7",5,0,0,"onclick desc"}]
+                                    <li class="">
+                                        <label class="rank rank<?=$bqno+1?> fl"><?=$bqno+1?></label>
+                                        <div class="info fl">
+                                            <a class="appName" href="<?=$bqsr['titleurl']?>" target="_blank"><?=$bqr['title']?> <?=$bqr['banben']?></a>
+                                            <div class="desc">
+                                                <a class="appImg fl" href="<?=$bqsr['titleurl']?>" target="_blank">
+                                                    <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?> <?=$bqr['banben']?>"></a>
+                                                <div class="fl">
+                                                    <p class="star">
+                                                        <i class="star<?=$bqr['dengji']?>"></i>
+                                                    </p>
+                                                    <p class="dlNum"><a href="<?=$bqsr[classurl]?>" target="_blank"><?=$bqsr['classname']?></a> |<?=$bqr['daxiao']?></p>
+                                                </div>
+                                                <a class="btn-download fr" href="<?=$bqr['down']?>" target="_blank">下载</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    [/e:loop]
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--友链 开始-->
+            [!--temp.dijiu_w_youlian--]
+            <!--友链 结束-->
+
+        </div>
+
+
+        <!--footer开始-->
+        [!--temp.dijiu_w_footer--]
+        <!--footer结束-->
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title><?php $ztvalue=ReturnZtAddField($bqr['zttitle'],'ztid,zttitle'); echo $ztvalue[zttitle]; ?>_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <meta charset="UTF-8">
+    <link href="/moban5/static/home/assets/css/style.css?v=1.1.1" rel="stylesheet">
+    <link href="/moban5/static/home/assets/css/pinglun.css?v=1.1.1" rel="stylesheet">
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.1.8.3.min.js?v=1.1.1"></script>
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/sly.min.js?v=1.1.1"></script>
+</head>
+<body oncopy="return false;" oncut="return false;">
+[!--temp.www_moban5_cn_header--]
+<div id="com-nav" class="fm-box clearfix">
+    <div class="inner clearfix">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a  href="/game/">游戏下载</a></li>
+            <li><a  href="/soft/">软件下载</a></li>
+            <li><a  href="/yxgl/">游戏攻略</a></li>
+            <li><a  href="/rjjc/">软件教程</a></li>
+            <li><a  href="/zt/" class="active">专题合辑</a></li>
+        </ul>
+    </div>
+</div>
+[!--temp.www_moban5_cn_gamehot--]
+<div id="guide-bar" class="m-box clearfix"> <i class="dot"></i>您当前所在位置：<a target="_blank" href="/" title="首页">首页</a> > <a target="_blank" href="/zt/" title="专题合辑">专题合辑</a> > [!--pagetitle--] </div>
+<div class="m-box clearfix">
+    <div class="spi-box clearfix">
+        <div class="cover"> <img src="[!--class.classimg--]" width="640" height="320" alt="[!--pagetitle--]" /> </div>
+        <div class="body">
+            <h1>[!--pagetitle--]</h1>
+            <div class="summary"> [!--class.intro--] </div>
+            <div class="bottom"> <i class="icon-app"></i>共<?php $num=$empire->gettotal("select count(*) as total from {$dbtbpre}enewsztinfo where ztid=".$GLOBALS[navclassid]);echo $num;?>个应用 </div>
+        </div>
+    </div>
+</div>
+<div class="spx-box m-box mt-15 clearfix">
+    <div class="head clearfix">
+        <div class="title"><i class="icon-download"></i>游戏下载</div>
+    </div>
+    <div class="list clearfix">
+        [!--empirenews.listtemp--]
+        <!--list.var1-->
+        [!--empirenews.listtemp--]
+    </div>
+    <div class="paginate clearfix" style="margin-bottom: 20px;">
+        <ul>
+            <div>
+                [!--show.listpage--]
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="spr-box m-box mt-15 clearfix">
+    <div class="head clearfix">
+        <div class="title"><i class="icon-doc"></i>最新专题</div>
+    </div>
+    <div class="frame clearfix">
+        <ul class="clearfix">
+            [e:loop={'select * from www_moban5_cn_enewszt where zcid in (1) order by addtime desc limit 12',10,24,0}]
+            <li> <a target="_blank" href="/<?=$bqr['ztpath']?>/" class="clearfix" title="<?=$bqr['ztname']?>"> <img src="<?=$bqr['ztimg']?>" width="320" height="160" alt="<?=$bqr['ztname']?>" />
+                <div class="mask">
+                    <div class="title"><?=$bqr['ztname']?></div>
+                    <div class="center">
+                        <div class="subject"><?=$bqr['ztname']?></div>
+                        <div class="btn">查看专题</div>
+                    </div>
+                </div>
+            </a> </li>
+            [/e:loop]
+        </ul>
+    </div>
+    <div class="prev"><a target="_blank" href="javascript:void(0)">上一个</a></div>
+    <div class="next"><a target="_blank" href="javascript:void(0)">下一个</a></div>
+</div>
+[!--temp.www_moban5_cn_footer--]
+<div id="back-btn" style="display: none;"> <a href="#ct-bar">向上</a> </div>
+<script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.lazyload.min.js?v=1.1.1"></script>
+<script src="/moban5/static/home/assets/js/lib/jquery-scrolltofixed-min.js?v=1.1.1" charset="utf-8"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/app.js?v=1.1.1"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/comment.js?v=1.1.1"></script>
+</body>
+</html>

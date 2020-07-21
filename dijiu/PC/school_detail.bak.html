@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="webkit" name="renderer">
+    <title>[!--pagetitle--]app下载|[!--pagetitle--] 安卓版[!--banben--]_<?=$public_r['add_[!db.pre!]name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    
+    <link href="/dijiu/static/css/base.css" type="text/css" rel="stylesheet">
+    <link href="/dijiu/static/css/inside.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="/dijiu/static/js/jquery-1.8.2.min.js"></script>
+    <script src="/dijiu/static/js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--header start-->
+    [!--temp.dijiu_w_inHeader--]
+    <!--header end-->
+
+
+    <!--show-shoool-->
+    <div class="fArea wrap clearfix">
+        <div class="breadcrumbs">你的位置：<a href="/">首页</a><em>/</em>
+            [!--newsnav--] > [!--title--]
+        </div>
+        <div class="main">
+            <div class="article-con pub_Title_01 mb">
+                <div class="art-box">
+                    <h2>[!--title--]</h2>
+                    <div class="info"><span>[!--newstime--]</span><span>来源：
+<?
+if($navinfor['befrom']=="") {
+echo ReturnPublicAddVar([!db.pre!]name);
+}
+else{
+echo $navinfor[befrom];
+}
+?>&nbsp;&nbsp;作者：<?
+if($navinfor['writer']=="") {
+echo "佚名";
+}
+else{
+echo $navinfor[writer];
+}
+?>
+                    </span>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="remark">[!--smalltext--]</div>
+                    <div class="content">[!--newstext--]</div>
+                    <!-- 调用电脑软件 -->
+
+<?php if($navinfor[appid]=='' || $navinfor[appid]==null){ ?>
+                    [e:loop={"select * from [!db.pre!]ecms_game where instr('$navinfor[title]',title)>0 order by newstime desc limit 1",6,24,0}]
+                    <div class="copy_tips">
+                        <div class="s_tit_01 clearfix">
+                            <div class="pic"><img src="<?=$bqr['titlepic']?>" class="thumb"></div>
+                            <div class="info">
+                                <h2>
+                                    <a href="<?=$bqsr['titleurl']?>"
+                                       target="_blank"><?=$bqr['title']?>
+                                    </a>
+                                    <em><?=$bqr['banben']?></em></h2>
+                                <div class="txt"><?=$bqsr[classname]?></div>
+                            </div>
+                        </div>
+                        <div class="rightdown"><a href="<?=$bqr['down']?>" target="_blank">立即下载</a> </div>
+                    </div>
+                    [/e:loop]
+                    <?php }else{ ?>
+                    [e:loop={"select * from [!db.pre!]ecms_game where id=$navinfor[appid] order by newstime desc limit 1",6,24,0}]
+                    <div class="copy_tips">
+                        <div class="s_tit_01 clearfix">
+                            <div class="pic"><img src="<?=$bqr['titlepic']?>" class="thumb"></div>
+                            <div class="info">
+                                <h2>
+                                    <a href="<?=$bqsr['titleurl']?>"
+                                       target="_blank"><?=$bqr['title']?>
+                                    </a>
+                                    <em><?=$bqr['banben']?></em></h2>
+                                <div class="txt"><?=$bqsr[classname]?></div>
+                            </div>
+                        </div>
+                        <div class="rightdown"><a href="<?=$bqr['down']?>" target="_blank">立即下载</a> </div>
+                    </div>
+                    [/e:loop]
+
+
+
+                    <div class="link_tips">
+                        标签聚合：
+
+
+                        [e:loop={"select * from [!db.pre!]enewstags order by rand() limit 25",0,24,0}]
+<?php
+$clsNum = mt_rand(12, 20);
+$clsNumb= mt_rand(0, 6);
+$clsNumc= mt_rand(0, 9);
+
+?>
+
+                        <a href="/tag/<?=$bqr['tagname']?>/"
+                           target="_blank"
+                           class="f<?=$clsNum?> fb<?=$clsNumb?> fc<?=$clsNumc?>">
+                            <?=$bqr['tagname']?>
+                        </a>
+                        [/e:loop]
+                    </div>
+                </div>
+            </div>
+            <div class="hotnews pub_Title_01 mb">
+                <div class="hd">
+                    <h2>相关教程资讯</h2>
+                </div>
+                <div class="bd">
+                  <ul class="listinfo_05 clearfix">
+                      
+                      [e:loop={"select * from [!db.pre!]ecms_news where title like '%$keyb[0]%' and id<>'$navinfor[id]' order by newstime desc limit 12",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?php
+if($tushu==1){
+$num=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where title like '%$keyb[0]%' and id<>'$navinfor[id]' order by newstime desc");
+                      $num2=12-$num;
+                      if($num2>0 || $num2==0){}else{$num2=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where classid='".$GLOBALS[navclassid]."' and id<>'$navinfor[id]' order by newstime desc limit $num2",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==2){
+$num=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where title like '%$keyb[0]%' and id<>'$navinfor[id]' order by newstime desc");
+                      $num201=12-$num;
+                      if($num201>0 || $num201==0){}else{$num201=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where title like '%$keyb[1]%' and id<>'$navinfor[id]' order by newstime desc limit $num201",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==2){
+$num30=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where (title like '%$keyb[0]%' or title like '%$keyb[1]%') and id<>'$navinfor[id]' order by newstime desc");
+                      $num20=12-$num30;
+                      if($num20>0 || $num20==0){}else{$num20=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where classid='".$GLOBALS[navclassid]."' and id<>'$navinfor[id]' order by newstime desc limit $num20",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==3){
+$num3=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where title like '%$keyb[0]%' and id<>'$navinfor[id]' order by newstime desc");
+                      $num4=12-$num3;
+                      if($num4>0 || $num4==0){}else{$num4=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where (title like '%$keyb[1]%' or title like '%$keyb[2]%') and id<>'$navinfor[id]' order by newstime desc limit $num4",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==3){
+$num300=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where (title like '%$keyb[0]%' or title like '%$keyb[1]%' or title like '%$keyb[2]%') and id<>'$navinfor[id]' order by newstime desc");
+                      $num200=12-$num300;
+                      if($num200>0 || $num200==0){}else{$num200=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where classid='".$GLOBALS[navclassid]."' and id<>'$navinfor[id]' order by newstime desc limit $num200",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==4){
+$num5=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where title like '%$keyb[0]%' and id<>'$navinfor[id]' order by newstime desc");
+                      $num6=12-$num-$num5;
+                      if($num6>0 || $num6==0){}else{$num6=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where (title like '%$keyb[1]%' or title like '%$keyb[2]%' or title like '%$keyb[3]%') and id<>'$navinfor[id]' order by newstime desc limit $num6",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+<?php
+if($tushu==4){
+$num3000=$empire->gettotal("select count(*) as total from [!db.pre!]ecms_news where (title like '%$keyb[0]%' or title like '%$keyb[1]%' or title like '%$keyb[2]%' or title like '%$keyb[3]%') and id<>'$navinfor[id]' order by newstime desc");
+                      $num2000=12-$num3000;
+                      if($num2000>0 || $num2000==0){}else{$num2000=0;}
+                      ?>
+                      [e:loop={"select * from [!db.pre!]ecms_news where classid='".$GLOBALS[navclassid]."' and id<>'$navinfor[id]' and id<>'$navinfor[id]' order by newstime desc limit $num2000",6,24,0}]
+                      <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                      [/e:loop]
+<?
+}
+?>
+                   
+                </ul>
+                </div>
+            </div>
+            <div class="about_zhuanti pub_Title_01 mb" id="related-special">
+                  <div class="hd">
+                    <h2>相关专题推荐</h2>
+                  </div>
+                <div class="bd">
+                <div class="a_zt_item clearfix">
+<?php
+$ztid=$empire->query("select ztid from www_moban5_cn_enewsztinfo where classid='$navinfor[classid]' and id='$navinfor[id]'");
+
+?>
+
+                    [e:loop={"select * from [!db.pre!]enewszt where ztid=$ztid order by rand() limit 1",6,24,0}]
+
+                  <div class="pic">
+                      <a href="<?=$bqr['ztpath']?>" target="_blank" title="<?=$bqr[ztname]?>">
+                          <img src="<?=$bqr[ztimg]?>" alt="<?=$bqr[ztname]?>" class="special-cover" />
+                      </a>
+                  </div>
+                  <div class="info">
+                    <h2>
+                        <a href="<?=$bqr[ztpath]?>" target="_blank" title="<?=$bqr[ztname]?>"><?=$bqr[ztname]?></a>
+                    </h2>
+                    <div class="txt"><?=$bqr[intro]?>
+                        <a href="<?=$bqr[ztpath]?>" target="_blank" title="<?=$bqr[ztname]?>"> >>> 详细浏览</a>
+                    </div>
+                  </div>
+
+                    [/e:loop]
+                </div>
+                    <ul class="listinfo_04 listinfo_010 clearfix">
+
+                        [e:loop={'select ztid from [!db.pre!]enewsztinfo where classid='.$navinfor[classid].' and id='.$navinfor[id],1,24,0}]
+<?php
+  $ztid=$bqr['ztid'];
+?>
+                        [/e:loop]
+                        [e:indexloop={$ztid,5,1}]
+
+
+                        <li class="clearfix">
+                            <div class="pic">
+                                <img src="<?=$bqsr['titlepic']?>" alt="<?=$bqr['title']?>" class="jt-thumb">
+                            </div>
+                            <div class="info">
+                                <h2>
+                                    <a href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>">
+                                        <?=$bqr['title']?><?=$bqr['banben']?>
+                                    </a>
+                                </h2>
+                                <div class="txt"> <?=$class_r[$bqr[classid]][classname]?><em>/</em>
+                                    <?=$bqr['daxiao']?>
+                                </div>
+                            </div>
+                        </li>
+                        [/e:indexloop]
+
+                    </ul>
+               </div>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="zt_advice pub_Title_01 mb">
+            <div class="hd">
+                <h2>专题推荐</h2>
+            </div>
+            <div class="bd">
+                <ul class="ad_pic">
+
+                    [e:loop={'select * from [!db.pre!]enewszt where zcid in (1,2,3,4,5,6) order by addtime desc limit 2',10,24,0}]
+                    <li>
+                        <a href="<?=$bqr['ztpath']?>"
+                           target="_blank"
+                           title="<?=$bqr['ztname']?>">
+                            <img src="<?=$bqr['ztimg']?>"
+                                 alt="<?=$bqr['ztname']?>"
+                                 class="special-cover" />
+                        </a>
+                        <p class="name">
+                            <a href="<?=$bqr['ztpath']?>"
+                               target="_blank"
+                               title="<?=$bqr['ztname']?>">
+                                <?=$bqr['ztname']?>
+                            </a>
+                        </p>
+                    </li>
+                    [/e:loop]
+                </ul>
+                <ul class="listinfo_02 clearfix">
+
+                    [e:loop={'select * from [!db.pre!]enewszt where zcid in (1,2,3,4,5,6) order by addtime desc limit 2,5',10,24,0}]
+                    <li>
+                        <a href="<?=$bqr['ztpath']?>"
+                           target="_blank"
+                           title="<?=$bqr['ztname']?>">
+                            <?=$bqr['ztname']?>
+                        </a>
+                    </li>
+                    [/e:loop]
+
+                </ul>
+            </div>
+        </div>
+        <div class="phb pub_Title_01 mb">
+        <div class="hd">
+            <h2>本栏浏览排行榜</h2>
+            <p class="week"><a href="">本周</a></p>
+            <p class="month"><a href="">本月</a></p>
+        </div>
+        <div class="bd">
+            <div class="list-box">
+                <ul class="listinfo_03">
+
+                    [e:loop={"select * from [!db.pre!]ecms_news where newstime>UNIX_TIMESTAMP()-86400*7 and classid='$GLOBALS[navclassid]' order by onclick desc limit 10",0,24,0}]
+                    <li>
+                        <em><?=$bqno?></em>
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>"><?=$bqr['title']?>
+                        </a>
+                    </li>
+                    [/e:loop]
+                </ul>
+            </div>
+                <div class="list-box">
+                    <ul class="listinfo_03">
+                        [e:loop={"select * from [!db.pre!]ecms_news where newstime>UNIX_TIMESTAMP()-86400*30 and classid='$GLOBALS[navclassid]' order by onclick desc limit 10",0,24,0}]
+                        <li>
+                            <em><?=$bqno?></em>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?>
+                            </a>
+                        </li>
+                        [/e:loop]
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="jcnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>热门文章</h2>
+            </div>
+             <div class="bd">
+                 [e:loop={"select * from [!db.pre!]ecms_news where classid='$GLOBALS[navclassid]' order by onclick desc limit 10",0,24,0}]
+                 <div class="jcnews-item clearfix">
+                     <div class="pic">
+                         <a href="<?=$bqsr['titleurl']?>"
+                            target="_blank"
+                            title="<?=$bqr['title']?>">
+                             <img src="<?=$bqr['titlepic']?>"
+                                  alt="<?=$bqr['title']?>"
+                                  class="thumb"></a>
+                     </div>
+                     <div class="info">
+                         <a href="<?=$bqsr['titleurl']?>"
+                            target="_blank"
+                            title="<?=$bqr['title']?>">
+                             <?=$bqr['title']?></a>
+                     </div>
+                 </div>
+                 [/e:loop]
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--footer开始-->
+    [!--temp.dijiu_w_inFooter--]
+    <!--footer结束-->
+
+
+   
+</body>
+<script type="text/javascript" src="/dijiu/static/js/common.js"></script>
+</html>

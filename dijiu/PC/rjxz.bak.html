@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static/css/public_1.css" rel="stylesheet" type="text/css">
+    <script src="/dijiu/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/static/js/jquery-scrolltofixed-min.js"></script>
+    <script src="/dijiu/static/js/common.js"></script>
+
+    [!--temp.tomb--]
+
+</head>
+<body>
+        <!--header开始-->
+        [!--temp.dijiu_w_header--]
+        <!--header结束-->
+        <div class="position wrap"><p>当前位置：[!--newsnav--] </p></div>
+        <!--main-->
+        <div class="main wrap clearfix">
+            <div class="soft-left">
+                <!--栏目导航 开始-->
+                [!--temp.dijiu_w_listnav--]
+                <!--栏目导航 结束-->
+
+
+                <div class="soft-list clearfix">
+                    <div class="pub-title">
+                        <h1 class="fl">电脑软件</h1>
+                    </div>
+                    <div class="list-con">
+                        <ul class="clearfix">
+                            [!--empirenews.listtemp--]
+                            <!--list.var1-->
+                            [!--empirenews.listtemp--]
+                        </ul>
+
+                        <li>
+                            <div class="img">
+                                <a href="[!--titleurl--]" target="_blank" title="[!--title--]">
+                                    <img src="[!--titlepic--]" alt="[!--title--] [!--banben--]"></a>
+                            </div>
+                            <div class="con">
+                                <a href="[!--titleurl--]"
+                                   target="_blank"
+                                   class="title"
+                                   title="[!--title--] [!--banben--]">[!--title--]</a>
+                                <p>
+                                    [!--class.name--]
+                                    <span>|</span>[!--daxiao--]</p>
+                                <p>[!--smalltext--]</p>
+                            </div>
+                            <div class="down-btn">
+                                <a href="[!--down--]"
+                                   target="_blank"
+                                   class="downBtn"
+                                   title="[!--class.name--] [!--banben--]">下载</a>
+                            </div>
+                        </li>
+
+                        <div class="paging" id="pageBox">
+                            [!--show.listpage--]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="soft-right">
+                <div class="softphb">
+                    <div class="pub-title">电脑软件排行</div>
+                    <div class="phb-list clearfix">
+
+                        <ul>
+                            [e:loop={"select * from [!db.pre!]ecms_soft where classid='".$GLOBALS[navclassid]."' and isgood in (1,2,3,4,5,6) order by rand() limit 8",6,24,0}]
+<?php
+$class="";
+if($bqno==1)
+{
+$class="on";
+};
+?>
+
+                            <li class="phb-item <?=$class?>">
+                                <a rel="nofollow"
+                                   href="<?=$bqsr['titleurl']?>"
+                                   title="<?=$bqr['title']?> <?=$bqr['banben']?>"
+                                   class="item-name"
+                                   target="_blank">
+                                    <span class="p-num num1"><?=$bqno?></span>
+                                    <?=$bqr['title']?>
+                                </a>
+                                <div class="item-info">
+                                    <img class="fl mr10"
+                                         alt="<?=$bqr['title']?> <?=$bqr['banben']?>"
+                                         src="<?=$bqr['titlepic']?>">
+                                    <p class="item-grade">
+                                        <span class="dib"><?=$bqsr['classname']?> /</span>
+                                        <span class="star"><i class="star<?=$bqr['dengji']?>"></i></span>
+                                    </p>
+                                    <a rel="nofollow"
+                                       href="<?=$bqr['down']?>"
+                                       title="<?=$bqr['title']?> <?=$bqr['banben']?>"
+                                       target="_blank"
+                                       class="item-btn">下载</a>
+                                </div>
+                            </li>
+                            [/e:loop]
+
+                        </ul>
+                    </div>
+                </div>     
+                <div class="softtj clearfix">
+                    <div class="pub-title">精品推荐</div>
+                    <div class="tj-list clearifx">
+                        [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."' and isgood in (1,2,3,4,5,6) order by newstime desc limit 8",6,24,0}]
+                        <div class="tj-item">
+                            <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>">
+                                <img src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>">
+                                <p class="tj-title"><?=$bqr['title']?></p>
+                            </a>
+                        </div>
+                        [/e:loop]
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer开始-->
+        [!--temp.dijiu_w_footer--]
+    <!--footer结束-->
+    </body>
+</html>
