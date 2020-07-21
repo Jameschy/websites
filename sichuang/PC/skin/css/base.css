@@ -1,0 +1,395 @@
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+textarea,
+article,
+aside,
+audio,
+canvas,
+figure,
+footer,
+header,
+mark,
+menu,
+nav,
+section,
+time,
+video {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+blockquote {
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img, input {
+    border: none;
+    outline: none;
+    vertical-align: top;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+strong,
+em,
+i {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+mark {
+    background: none;
+}
+
+input::-ms-clear {
+    display: none !important;
+}
+
+body {
+    font: 14px/1.5 \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", "Droid Sans Fallback", SimSun, sans-serif;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* visibility */
+.invisible {
+    visibility: hidden;
+}
+
+/* display */
+.show {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.fl-l {
+    float: left;
+}
+
+.fl-r {
+    float: right;
+}
+
+/* clear */
+.clear {
+    *zoom: 1;
+}
+
+.clear:after {
+    display: table;
+    clear: both;
+    content: " ";
+}
+
+/* ellipsis */
+.ellipsis-one {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-two {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-align: left;
+    -webkit-line-clamp: 2;
+}
+
+/* text-align */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* overflow */
+.ovh {
+    overflow: hidden;
+}
+
+.font-bold {
+    font-weight: 500;
+}
+
+.font-bolds {
+    font-weight: 600
+}
+
+em {
+    font-style: normal;
+}
+
+i {
+    font-style: normal;
+}
+
+/* white-space */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* word-wrap */
+.word-wrap {
+    word-wrap: break-word;
+}
+
+/* word-break */
+.word-break {
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+
+/* line-through */
+.line-through {
+    text-decoration: line-through;
+}
+
+/* flex */
+.f-inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+.f-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.f-flex-wrap {
+    /*超出换行*/
+    -webkit-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.f-flex-h {
+    /*水平方向*/
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.f-flex-v {
+    /*垂直方向*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.f-flex-hr {
+    /*水平反向*/
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-box-pack: end;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+.f-flex-vr {
+    /*垂直反向*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-box-pack: end;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+.f-flex-1 {
+    /*自动伸缩*/
+    -webkit-box-flex: 1;
+    width: 0;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.f-flex-v .f-flex-1,
+.f-flex-vr .f-flex-1 {
+    width: auto;
+}
+
+.f-hc {
+    /*水平居中*/
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.f-sb {
+    /*两端对齐，水平垂直受显示方向影响*/
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.f-sa {
+    /*两端对齐，水平垂直受显示方向影响*/
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+
+.f-vt {
+    /*垂直居顶*/
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -ms-flex-align: start;
+}
+
+.f-vc {
+    /*垂直居中*/
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+}
+
+.f-vb {
+    /*垂直居底*/
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -ms-flex-align: end;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: 0 1px 10px rgba(131, 148, 248, 0.32);
+}
+
+.shadow-big {
+    box-shadow: 0 1px 30px rgba(131, 148, 248, 0.32);
+}
+
+
+/* div, a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    text-decoration: none;
+} */

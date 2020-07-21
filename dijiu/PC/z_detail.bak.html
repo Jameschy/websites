@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title><?php $ztvalue=ReturnZtAddField($bqr['zttitle'],'ztid,zttitle'); echo $ztvalue[zttitle]; ?>_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static/css/public.css" rel="stylesheet" type="text/css">
+    <script src="/dijiu/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/static/js/common.js"></script>
+    <script language="javascript" type="text/javascript">
+        <!--
+        showMobile("//m.dijiu.com/z/dnyyltrj/");
+        //-->
+    </script>
+</head>
+<body>
+        <!--header开始-->
+        [!--temp.dijiu_w_header--]
+        <!--header结束-->
+    <div class="position wrap">
+        <p>当前位置：
+            <a href="/">首页</a>&nbsp;&gt;&nbsp;
+            <a href="/zt/">专题</a>&nbsp;&gt;&nbsp;
+            <a href="javascript:;">[!--pagetitle--] </a>
+        </p>
+    </div>
+        <!--main-->
+        <div class="main wrap">
+            <div class="sp-centent">
+                <div class="sp-detail clearfix">
+                    <img class="fl sp-img"
+                         src="[!--class.classimg--]"
+                         alt="[!--pagetitle--]" />
+                    <div class="fr sp-info">
+                        <h1>[!--pagetitle--]</h1>
+                        <p> [!--class.intro--] </p>
+                        <div class="sp-share fr">
+                            <div class="total-count">
+                                <span>共<?php $num=$empire->gettotal("select count(*) as total from {$dbtbpre}enewsztinfo where ztid=".$GLOBALS[navclassid]);echo $num;?>个应用 </span>
+                            </div>
+                            <div class="social-share"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashed-line"></div>
+                <div class="sp-soft-list">
+
+                    <ul class="clearfix">
+                        [!--empirenews.listtemp--]
+                        <!--list.var1-->
+                        [!--empirenews.listtemp--]
+
+                        $listtemp='<li>
+                            <a href="[!--titleurl--]" class="s-img" target="_blank">
+                                <img src="[!--titlepic--]" alt="[!--title--]">
+                            </a>
+                            <div class="s-info">
+                                <a href="[!--titleurl--]"
+                                   class="s-title"
+                                   target="_blank">[!--title--]
+                                </a>
+                                <div class="s-det">
+                                    <p>[!--newstime--]</p>
+                                    <p>[!--this.classname--] |
+                                        <i class="zt-dn">[!--banben--]</i>
+                                    </p>
+                                    <a href="[!--down--]" class="s-btn" target="_blank">下载</a>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="s-softsay">[!--smalltext--]</p>
+                        </li>';
+                    </ul>
+
+                    <div class="paging" id="pageBox">
+                        [!--show.listpage--]
+                    </div>
+                </div>
+            </div>
+            <div class="tjzt mt20 clearfix">
+                <div class="pub-title">推荐专题</div>
+                <div class="tjzt-list">
+
+                    <ul>
+                        [e:loop={'select * from www_moban5_cn_enewszt where zcid in (1) order by addtime desc limit 8',10,24,0}]
+                        <li class="spec">
+                            <a href="/<?=$bqr['ztpath']?>/"
+                               title="<?=$bqr['ztname']?>"
+                               target="_blank">
+                                <img src="<?=$bqr['ztimg']?>" alt="<?=$bqr['ztname']?>">
+                            </a>
+                            <p>
+                                <a href="/<?=$bqr['ztpath']?>/"
+                                   title="<?=$bqr['ztname']?>"
+                                   target="_blank"><?=$bqr['ztname']?></a>
+                            </p>
+                        </li>
+                        [/e:loop]
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!--footer开始-->
+        [!--temp.dijiu_w_footer--]
+    <!--footer结束-->
+    </body>
+<script src=static/js/e13cf71a907e41cb958cd7493a187120.js></script>
+<link rel="stylesheet" href="/dijiu/static/css/share.min.css">
+<script src="/dijiu/static/js/social-share.js"></script>
+<script src="/dijiu/static/js/qrcode.js"></script>
+</html>
+

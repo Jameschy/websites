@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static/css/public_1.css" rel="stylesheet" type="text/css">
+    <script src="/dijiu/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/static/js/common.js"></script>
+
+    [!--temp.tomb--]
+
+</head>
+<body>
+        <!--header开始-->
+        [!--temp.dijiu_w_header--]
+        <!--header结束-->
+        <div class="position wrap">
+            <p>当前位置：
+                <a href="/">首页</a>&nbsp;>&nbsp;
+                <a href="/pgxz/"> 软件下载 </a>
+            </p>
+        </div>
+        <!--main-->
+        <div class="main wrap">
+            <section class="main-cover">
+                <div class="flmod">
+                    <div class="fllist clearfix">
+                        <h4>
+                            <span>最新软件</span></h4>
+                        <p>
+                            [e:loop={"select classid,classname from [!db.pre!]enewsclass where bclassid = 32 order by classid desc limit 9",0,24,0}]
+                            <a href="<?=$bqsr[classurl]?>" target="_blank">
+                                <?=$class_r[$bqr[classid]][classname]?>
+                            </a>
+                            [/e:loop]
+
+                        </p>
+                        <a target="_blank" class="az_more" href="/pgyy/">+更多</a>
+                    </div>
+                    <ul>
+
+                        [e:loop={"select * from [!db.pre!]ecms_game where classid<50 and isgood in (1,2,3,4,5,6) order by newstime desc limit 15",6,24,0}]
+
+                        <li>
+                            <a target="_blank"
+                               href="<?=$bqsr['titleurl']?>"
+                               title="<?=$bqr['title']?> <?=$bqr['banben']?>">
+                                <img src="<?=$bqr['titlepic']?>"
+                                     alt="<?=$bqr['title']?>">
+                                <span>
+                                    <?=$bqr['title']?>
+                                    <?=$bqr['banben']?>
+                                </span>
+                            </a>
+                            <p>
+                                <em>类型：<?=$bqsr[classname]?></em>
+                                <em>大小：<?=$bqr['daxiao']?></em></p>
+                            <a target="_blank"
+                               href="<?=$bqsr['titleurl']?>"
+                               class="a_a1">下载</a>
+                        </li>
+
+                        [/e:loop]
+
+                    </ul>
+                </div>
+                <div class="flmod">
+                    <div class="fllist clearfix">
+                        <h4>
+                            <span>推荐软件</span></h4>
+                        <p>
+                            [e:loop={"select classid,classname from [!db.pre!]enewsclass where bclassid = 32 order by classid asc limit 9",0,24,0}]
+                            <a href="<?=$bqsr[classurl]?>" target="_blank">
+                                <?=$class_r[$bqr[classid]][classname]?>
+                            </a>
+                            [/e:loop]
+                        </p>
+                        <a target="_blank" class="az_more" href="/pgsy/">+更多</a>
+                    </div>
+                    <ul>
+
+                        [e:loop={"select * from [!db.pre!]ecms_soft where classid>33 and isgood not in (2,3,4,5) order by newstime desc limit 15",6,24,0}]
+                        <li>
+                            <a target="_blank"
+                               href="<?=$bqsr['titleurl']?>"
+                               title="<?=$bqr['title']?> <?=$bqr['banben']?>">
+                                <img src="<?=$bqr['titlepic']?>"
+                                     alt="<?=$bqr['title']?>">
+                                <span>
+                                    <?=$bqr['title']?>
+                                    <?=$bqr['banben']?>
+                                </span>
+                            </a>
+                            <p>
+                                <em>类型：<?=$bqsr[classname]?></em>
+                                <em>大小：<?=$bqr['daxiao']?></em></p>
+                            <a target="_blank"
+                               href="<?=$bqsr['titleurl']?>"
+                               class="a_a1">下载</a>
+                        </li>
+                        [/e:loop]
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--footer开始-->
+        [!--temp.dijiu_w_footer--]
+    <!--footer结束-->
+    </body>
+</html>

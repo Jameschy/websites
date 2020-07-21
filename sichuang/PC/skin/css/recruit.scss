@@ -1,0 +1,504 @@
+div,
+a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+// 头部
+.head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 3;
+    overflow: visible;
+    transition: all .3s;
+
+    div,
+    a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    #head {
+        width: 1280px;
+        height: 100%;
+        overflow: visible;
+
+        // logo
+        .logo {
+            float: left;
+            width: 197px;
+            height: 43px;
+            margin: 13.5px 0;
+            transform: scale(0.9);
+        }
+
+        // 导航栏
+        .head-ul {
+            height: 70px;
+            text-align: right;
+            overflow: visible;
+
+            .head-li {
+                position: relative;
+                display: inline-block;
+                height: 40px;
+                line-height: 40px;
+                margin: 15px 0;
+                padding: 0 20px;
+                font-size: 16px;
+                color: white;
+                border-radius: 20px;
+                overflow: visible;
+                transition: all .3s;
+
+                .hl-ul {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 0;
+                    opacity: 0;
+                    overflow: visible;
+                    transition: all .3s;
+
+                    .hl-li {
+                        height: 40px;
+                        line-height: 40px;
+                        margin: 10px 0;
+                        font-size: 14px;
+                        background: white;
+                        cursor: pointer;
+                        white-space: nowrap;
+                        overflow: visible;
+                        transition: all .3s;
+                    }
+
+                    .hl-li:hover {
+                        color: white;
+                        background: #ff8350;
+                    }
+                }
+
+                &:hover {
+                    .hl-ul {
+                        top: 40px;
+                        height: auto;
+                        opacity: 1;
+
+                        .hl-li {
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            div.head-li {
+                cursor: default;
+            }
+
+            .head-li.on,
+            .head-li:hover {
+                color: #ff8350;
+                background: white;
+            }
+        }
+    }
+}
+
+.head.on {
+    background: white;
+
+    #head {
+        .head-li {
+            color: #333;
+            height: 70px;
+            line-height: 70px;
+            margin: 0;
+            padding: 0 20px;
+            border-radius: 0;
+
+            &:hover {
+                .hl-ul {
+                    top: 70px;
+                    background: white;
+                    box-shadow: 3px 5px 10px rgba(131, 148, 248, 0.32);
+
+                    .hl-li {
+                        margin: 0;
+                        border-bottom: solid 1px #dfdfdf;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+
+        .head-li.on,
+        .head-li:hover {
+            color: white;
+            background: #ff8350;
+            // .hl-line {opacity: 1;}
+        }
+    }
+}
+
+// 宣传大图
+.intro-img {
+    width: 100%;
+    min-width: 1280px;
+    // min-height: calc(1280px*103/480);
+    height: 408px;
+    margin-top: 70px;
+
+    >img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+// 底部
+.footer {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to right, #ff956a 50%, #ff8350 50%);
+
+    div,
+    a {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    #footer {
+        position: relative;
+        width: 1280px;
+        padding: 50px 0 10px 0;
+        background: url('../img/footer_bg.png') no-repeat;
+        overflow: visible;
+
+        // 底部导航栏
+        .footer-ul {
+            .footer-li {
+                float: left;
+                margin-right: 130px;
+
+                .fl-title {
+                    height: 18px;
+                    line-height: 18px;
+                    margin-bottom: 44px;
+                    text-align: left;
+                    font-size: 16px;
+                    color: white;
+                    cursor: default;
+                }
+
+                .fl-box {
+                    min-height: 36px;
+
+                    .flb-li {
+                        height: 36px;
+                        line-height: 36px;
+                        font-size: 16px;
+                        text-align: left;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                // 联系我们
+                .fl-box.contact {
+                    .flb-li {
+                        height: auto;
+                        margin-bottom: 15px;
+
+                        >img {
+                            float: left;
+                            width: 25px;
+                            height: 25px;
+                            margin-top: 5.5px;
+                            margin-right: 18px;
+                        }
+
+                        >div {
+                            font-size: 16px;
+                            text-align: left;
+                            color: white;
+                        }
+                    }
+                }
+
+                // 关注公众号
+                .fl-box.notice {
+                    .fl-qr {
+                        width: 159px;
+                        height: 159px;
+                        background: rgba(0, 0, 0, 0.8);
+                    }
+                }
+            }
+
+            .footer-li:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+
+            >p {
+                height: 12px;
+                line-height: 12px;
+                margin-bottom: 10px;
+                color: white;
+                font-size: 12px;
+
+                >img {
+                    height: 100%;
+                    vertical-align: top;
+                }
+
+                >a {
+                    display: inline-block;
+                    height: 12px;
+                    line-height: 12px;
+                    color: white;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// 复用类
+.same-box {
+    position: relative;
+
+    #same-box {
+        width: 1280px;
+
+        // 顶部
+        .same-top {
+            width: 100%;
+            height: 120px;
+            overflow: visible;
+
+            .same-logo {
+                float: left;
+                height: 120px;
+            }
+        }
+    }
+}
+
+// 艺人&星探招募
+.same-box.artSout {
+    #same-box {
+        margin: 61px auto 85px;
+
+        .same-top {
+            margin-bottom: 36px;
+        }
+
+        .artSout-ul {
+            border: solid 1px #dfdfdf;
+            text-align: left;
+            clear: both;
+
+            .artSout-li {
+                position: relative;
+                display: inline-block;
+                float: left;
+                width: 20%;
+                height: 440px;
+                padding: 62px 37px;
+                box-sizing: border-box;
+                border-right: solid 1px #dfdfdf;
+                overflow: visible;
+
+                .artSout-font {
+                    line-height: 29px;
+                    text-align: left;
+                    font-size: 14px;
+                }
+
+                .artSout-font.big {
+                    line-height: 30px;
+                    margin-bottom: 37px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #ef7f51;
+                }
+
+                .artSout-font.middle {
+                    line-height: 20px;
+                    margin-bottom: 26px;
+                    font-size: 20px;
+                }
+
+                >img {
+                    position: absolute;
+                    top: 0;
+                    right: -19.5px;
+                    bottom: 0;
+                    width: 39px;
+                    height: 25px;
+                    padding: 25px 0;
+                    margin: auto;
+                    background: white;
+                }
+            }
+
+            .artSout-li:last-child {
+                border-right: none;
+
+                >img {
+                    display: none;
+                }
+            }
+
+            .artSout-li:hover {
+                background: #ef7f51;
+
+                .artSout-font,
+                .artSout-font.big {
+                    color: white;
+                }
+
+                >img {
+                    background: transparent;
+                }
+            }
+
+            // 合伙人
+            .partner-li {
+                display: inline-block;
+                float: left;
+                width: 400px;
+                height: 339px;
+                padding: 47px 69px 0;
+                margin-right: 40px;
+                border: solid 1px #dfdfdf;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                .partner-img {
+                    height: 50px;
+                    margin-bottom: 40px;
+
+                    >img {
+                        height: 100%;
+                    }
+                }
+
+                .partner-font {
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: left;
+                }
+
+                .partner-font.big {
+                    height: 22px;
+                    line-height: 22px;
+                    margin-bottom: 50px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-align: center;
+                    opacity: 0.9;
+                }
+            }
+
+            .partner-li:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .artSout-ul.no-border {
+            border: none;
+        }
+    }
+}
+
+// 艺人&星探招募
+.same-box.contact {
+    #same-box {
+        margin: 65px auto 63px;
+
+        .same-top {
+            margin-bottom: 77px;
+        }
+
+        .contact-box {
+            padding: 69px 65px;
+            box-sizing: border-box;
+
+            .contact-right {
+                float: right;
+                width: 577px;
+                height: 470px;
+                margin-left: 30px;
+                border: solid 1px #dfdfdf;
+                border-radius: 4px;
+                box-sizing: border-box;
+
+                >img {
+                    height: 100%;
+                    transform: translateX(-107px);
+                }
+            }
+
+            .contact-left {
+                .cl-li {
+                    margin-bottom: 45px;
+
+                    .cl-font {
+                        height: 20px;
+                        line-height: 20px;
+                        margin-bottom: 25px;
+                        font-size: 20px;
+                        text-align: left;
+                        color: #999;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+
+                    .cl-font.big {
+                        height: 46px;
+                        line-height: 46px;
+                        margin-bottom: 0;
+                        font-size: 46px;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                }
+
+                .cl-li:last-child {
+                    margin-bottom: 0;
+                }
+
+                .cl-li.another {
+                    .cl-font {
+                        margin-bottom: 18px;
+                    }
+
+                    .cl-font.big {
+                        height: 24px;
+                        line-height: 24px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+

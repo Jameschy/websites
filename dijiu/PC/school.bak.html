@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static//css/base.css" type="text/css" rel="stylesheet">
+    <link href="/dijiu/static//css/inside.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="/dijiu/static//js/jquery-1.8.2.min.js"></script>
+    <script src="/dijiu/static//js/jquery.superslide.2.1.1.js" type="text/javascript"></script>
+</head>
+ <body>
+  <!--header start-->
+  <div class="head-top">
+	<div class="headArea wrap clearfix">
+	    <div class="welcome">第九软件网：打造最安全放心的免费绿色软件下载站！</div>
+	    <div class="set">
+	        <a href="https://m.dijiu.com" target="_blank"><em>手机版</em></a>|<a href="/today/" target="_blank">最新软件</a>|<a href="/top/" target="_blank">下载排行</a>|<a href="/wenjiangeshi/" target="_blank">格式大全</a>|<a href="/fb.html" target="_blank">软件发布</a>|<a href="/company/"  target="_blank">软件厂商</a>|<a href="/heji/"  target="_blank">软件合集</a>
+	    </div>
+	</div>
+</div>
+  <header class="header">
+      <!--顶部-->
+<div class="top-nav navbar m-b-0 b-0">
+    <div class="container">
+        <div class="row">
+            <!-- LOGO -->
+            <div class="topbar-left col-lg-3">
+                <a href="/"><img src="/dijiu/static//picture/logo.png" alt="第九软件网"></a>
+            </div>
+            <!-- End Logo-->
+            <div class="menu-extras col-lg-9">
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li>
+                        <form action="http://s.dijiu.com/cse/search" role="search" class="app-search pull-left" method="get" target="_blank">
+                            <input type="hidden" name="s" value="8193850114068420663">
+                            <input type="hidden" name="entry" value="1">
+                            <input type="text" name="q" class="form-control" placeholder="输入关键词进行查找">
+                            <button type="submit" class="search-b"><i class="ti-search"></i></button>
+                        </form>
+                    </li>
+                    <li class="dropdown user-box">
+                        <a href="/fb.html" target="_blank" class="dropdown-toggle profile btn btn-default">提交软件发布</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+      <!--导航-->
+<div class="navbar-custom shadow">
+    <div class="container">
+        <div id="navigation">
+            <ul class="navigation-menu">
+                <li class=""><a href="/" target="_blank"><i class="ti-home"></i><span>首页</span></a></li>
+                <li class="has-submenu ">
+                    <a href="/pc/" target="_blank"><i class="ti-desktop"></i><span>PC软件</span></a>
+                </li>
+                <li class="has-submenu ">
+                    <a href="/android/" target="_blank"><i class="ti-android"></i><span>安卓下载</span></a>
+                </li>
+                <li class="has-submenu ">
+                    <a href="/ios/" target="_blank"><i class="ti-apple"></i><span>苹果下载</span></a>
+                </li>
+                <li class="has-submenu ">
+                    <a href="/qudong/" target="_blank"><i class="ti-filter"></i><span>驱动下载</span></a>
+                </li>
+                <li class="has-submenu ">
+                    <a href="/game/" target="_blank"><i class="ti-game"></i><span>电脑游戏</span></a>
+                </li>
+                <li class="has-submenu active">
+                    <a href="/school/" target="_blank"><i class="ti-book"></i><span>教程攻略</span></a>
+                </li>
+                <li class="has-submenu ">
+                    <a href="/zhuanti/" target="_blank"><i class="ti-world"></i><span>精选专题</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> 
+ </header>
+<!--list-down-->
+<div class="fArea wrap clearfix">
+  <div class="breadcrumbs">你的位置：
+      <a href="/">首页</a><em>/</em>
+      <a href="<?=sys_ReturnBqClassUrl($class_r[$GLOBALS[navclassid]]);?>">[!--pagetitle--]</a><em>/</em>
+  </div>
+    <div class="main">
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>设计教程</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/shejijiaocheng/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+                [e:loop={'2',5,'titlepic<>""','onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>办公教程</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/bangongjiaocheng/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+
+                [e:loop={'3',5,0,'onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?$bqr['titlepic']:$public_r['newsurl'].'e/data/images/notimg.gif'?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>软件教程</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/soft_jiaocheng/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+                [e:loop={'4',5,0,'onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>数据编程</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/shujubiancheng/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+                [e:loop={'5',5,0,'onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>手机应用</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/shoujiyingyong/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+                [e:loop={'6',5,0,'onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>游戏娱乐</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/youxiyule/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd">
+                [e:loop={'7',5,0,'onclick asc'}]
+                <div class="hotnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="/dijiu/static/images/omg-article.png"
+                                 lay-src="<?=$bqr['titlepic']?>"
+                                 class="thumb" alt="<?=$bqr['title']?>">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <h2>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?></a>
+                        </h2>
+                        <div class="txt"><?=esub($bqr['smalltext'])?></div>
+                    </div>
+                </div>
+                [/e:loop]
+
+            </div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>系统操作</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/xitongcaozuo/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd"></div>
+        </div>
+        <div class="hotnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>网络技术</h2>
+                <p class="more"><a href="https://www.dijiu.com/school/wangluojishu/" target="_blank">浏览更多</a></p>
+            </div>
+            <div class="bd"></div>
+        </div>
+    </div>
+    <div class="extra">
+        <div class="phb pub_Title_01 mb">
+            <div class="hd">
+                <h2>本栏浏览排行榜</h2>
+                <p id="school_week" class="week"><a href="">本周</a></p>
+                <p id="school_month" class="month"><a href="">本月</a></p>
+            </div>
+            <div class="bd">
+                <div class="list-box">
+                    <ul class="listinfo_03">
+                        [e:loop={"select * from [!db.pre!]ecms_news where newstime>UNIX_TIMESTAMP()-86400*7 and classid=1 order by onclick desc limit 10",0,24,0}]
+                        <li>
+                            <em><?=$bqno?></em>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=$bqr['title']?>
+                            </a>
+                        </li>
+                        [/e:loop]
+                    </ul>
+                </div>
+                <div class="list-box" style="display: none;">
+                    <ul class="listinfo_03">
+                        [e:loop={"select * from [!db.pre!]ecms_news where newstime>UNIX_TIMESTAMP()-86400*30 and classid=1 order by onclick desc limit 10",0,24,0}]
+                        <li>
+                            <em><?=$bqno?></em>
+                            <a href="<?=$bqsr['titleurl']?>"
+                               target="_blank"
+                               title="<?=$bqr['title']?>"><?=esub($bqr[title],36,'...')?>
+                            </a>
+                        </li>
+                        [/e:loop]
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="zt_advice pub_Title_01 mb">
+            <div class="hd">
+                <h2>专题推荐</h2>
+            </div>
+            <div class="bd">
+
+                <ul class="ad_pic">
+
+
+                    [e:loop={'select * from [!db.pre!]enewszt where zcid in (1) order by addtime desc limit 2',10,24,0}]
+                    <li>
+                        <a href="/<?=$bqr['ztpath']?>/"
+                           target="_blank"
+                           title="<?=$bqr['ztname']?>">
+                            <img src="<?=$bqr['ztimg']?>"
+                                 alt="<?=$bqr['ztname']?>"
+                                 class="special-cover">
+                        </a>
+
+                        <p class="name">
+                            <a href="/<?=$bqr['ztpath']?>/"
+                               target="_blank"
+                               title="<?=$bqr['ztname']?>"><?=$bqr['ztname']?></a>
+                        </p>
+                    </li>
+                    [/e:loop]
+
+                </ul>
+
+                <ul class="listinfo_02 clearfix">
+
+                    [e:loop={'select * from [!db.pre!]enewszt where zcid in (1) order by addtime desc limit 2,4',10,24,0}]
+                    <li>
+                        <a href="/<?=$bqr['ztpath']?>/"
+                           target="_blank"
+                           title="<?=$bqr['ztname']?>"><?=$bqr['ztname']?>
+                        </a>
+                    </li>
+                    [/e:loop]
+
+                </ul>
+            </div>
+        </div>
+        <div class="jcnews pub_Title_01 mb">
+            <div class="hd">
+                <h2>[!--pagetitle--]热门文章</h2>
+            </div>
+            <div class="bd">
+                [e:loop={"select * from [!db.pre!]ecms_news where classid=1 order by onclick desc limit 10",0,24,0}]
+                <div class="jcnews-item clearfix">
+                    <div class="pic">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <img src="<?=$bqr['titlepic']?>"
+                                 alt="<?=$bqr['title']?>"
+                                 class="thumb"></a>
+                    </div>
+                    <div class="info">
+                        <a href="<?=$bqsr['titleurl']?>"
+                           target="_blank"
+                           title="<?=$bqr['title']?>">
+                            <?=$bqr['title']?></a>
+                    </div>
+                </div>
+                [/e:loop]
+
+            </div>
+        </div>
+    </div>
+</div>
+  <!--footer开始-->
+  [!--temp.dijiu_w_inFooter--]
+  <!--footer结束-->
+
+<script type="text/javascript" src="/dijiu/static//js/common.js"></script>
+<script type="text/javascript" src="/dijiu/static//js/layui.js"></script>
+<script></script>
+</body>
+</html>

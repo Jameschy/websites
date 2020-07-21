@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>[!--pagetitle--]app下载|[!--pagetitle--] 安卓版[!--banben--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <meta charset="UTF-8">
+    <link href="/moban5/static/home/assets/css/style.css?v=1.1.1" rel="stylesheet">
+    <link href="/moban5/static/home/assets/css/pinglun.css?v=1.1.1" rel="stylesheet">
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.1.8.3.min.js?v=1.1.1"></script>
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/sly.min.js?v=1.1.1"></script>
+    <script type="text/javascript">
+        (function(){var ua=navigator.userAgent.toLowerCase();var bIsIpad=ua.match(/ipad/i)=="ipad";var bIsIphoneOs=ua.match(/iphone os/i)=="iphone os";var bIsAndroid=ua.match(/android/i)=="android";var bIsWM=ua.match(/windows mobile/i)=="windows mobile";if(bIsIpad||bIsIphoneOs||bIsAndroid||bIsWM){window.location.href="<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]"}})();
+    </script>
+</head>
+<body oncopy="return false;" oncut="return false;">
+[!--temp.www_moban5_cn_header--]
+[!--temp.www_moban5_cn_bigdaohang--]
+[!--temp.www_moban5_cn_daohang--]
+[!--temp.www_moban5_cn_softhot--]
+<div id="guide-bar" class="m-box clearfix"> <i class="dot"></i>您当前所在位置：[!--newsnav--] > [!--title--] </div>
+<div class="m-box clearfix">
+    <div class="full-row clearfix">
+        <div class="col-865 ng">
+            <div class="ae-box clearfix">
+                <div class="head clearfix">
+                    <h1>[!--title--] [!--banben--]</h1>
+                </div>
+                <div class="content clearfix">
+                    <div class="main clearfix">
+                        <div class="icon"> <img src="[!--titlepic--]" width="144" height="144"  alt="[!--title--]" >
+                            <!--   <div class="slf"><label>9.7</label>分</div> -->
+                        </div>
+                        <div class="info clearfix">
+                            <div class="hr clearfix"> <span class="hc">类型: [!--class.name--]</span> <span class="hc">大小: [!--daxiao--]</span> <span class="hc">语言: [!--yuyan--]</span>  <span class="hc">版本: [!--banben--]</span> </div>
+                            <div class="hr clearfix"> <span class="hc">等级：<i class="s[!--dengji--]"></i></span> <span class="hc">更新: [!--newstime--]</span> </div>
+                            <div class="tags clearfix"> <span class="label">标签：</span>
+                                [e:loop={"SELECT * FROM www_moban5_cn_ecms_soft_data_1 WHERE id = '".$navinfor[id]."'",1,24,0}]
+                                <?
+            $a="$bqr[infotags]";
+            $str=str_replace('，', ',', $a);
+            $tag='';
+            $t= explode(",", $str);
+
+                    for($i=0;$i<count($t);$i++)
+                    {
+					if($i<count($t)-1){$doudouhao="，";}else{$doudouhao='';}
+                            if($t[$i])
+                            {
+                                    $tagslink="/tag/".$t[$i]."/";
+                                    $tag.="<span class='item'><a href='$tagslink' target='_blank'>".$t[$i]."</a></span>";
+                                }
+                                }
+                                echo $tag;
+                                ?>
+                                [/e:loop]
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+if($bqr[bendown]==''){
+$downurll33="\\\\/url.php?url=".base64_encode($navinfor[down]);
+}else{
+$downurll33="\\\\/url.php?url=".base64_encode($navinfor[bendown]);
+}
+?>
+                    <div class="dl-action clearfix">
+                        <div class="btn"> <a target="_blank" href="<?=$downurll33?>" class="android">安卓版下载</a>
+                            <div class="qr" style="display: none;">
+                                <div class="media"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="144" height="144" alt="[!--title--]"  />手机扫描下载 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-qr"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="144" height="144" alt="[!--title--]" />扫一扫下载到手机 </div>
+                </div>
+            </div>
+
+            <!-- 相关下载 -->
+
+            <div class="mc-nav mt-15 clearfix">
+                <div class="fc-box">
+                    <div class="row clearfix">
+                        <ul>
+                            <li><a  href="#mc-summary" class="active">游戏简介</a></li>
+                            <li><a  href="#mc-screen">游戏截图</a></li>
+                            <li><a  href="#mc-guess">猜你喜欢</a></li>
+                            <li><a  href="#mc-news">相关文章</a></li>
+                            <li><a  href="#comment">评论</a></li>
+                        </ul>
+                        <div class="search" style="display: none;">
+                            <div class="field clearfix">
+                                <input type="text" name="" placeholder="请输入关键词" value="" />
+                                <button type="button">搜 索</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags clearfix"> <span class="subject">为您推荐：</span>
+                        [e:loop={"SELECT * FROM www_moban5_cn_ecms_soft_data_1 WHERE id = '".$navinfor[id]."'",1,24,0}]
+                        <?
+            $a="$bqr[infotags]";
+            $str=str_replace('，', ',', $a);
+            $tag='';
+            $t= explode(",", $str);
+
+                    for($i=0;$i<count($t);$i++)
+                    {
+					if($i<count($t)-1){$doudouhao="，";}else{$doudouhao='';}
+                            if($t[$i])
+                            {
+                                    $tag.="<span class='item'><a target='_blank' href='/e/tags/?tempid=15&tagname=".$t[$i]."' title='".$t[$i]."'>".$t[$i]."</a></span>";
+                        }
+                        }
+                        echo $tag;
+                        ?>
+                        [/e:loop]
+                    </div>
+                </div>
+            </div>
+            <div id="mc-summary" class="mc-box clearfix">
+                <div class="wrap clearfix">
+                    <div class="body info_body clearfix">
+                        [!--newstext--]
+                    </div>
+                    <div class="action"> <a target="_blank" href="javascript:void(0)" class="half">显示全部</a> </div>
+                </div>
+            </div>
+
+            <!-- 封面图-->
+            <div id="mc-screen" class="mc-box clearfix">
+                <div class="head clearfix">
+                    <div class="title">游戏截图</div>
+                </div>
+                <div class="images" id="centered">
+                    <ul class="clearfix">
+                        <?php
+$picr=explode(egetzy('rn'),$navinfor[morepic]);
+$tushu =count($picr);
+
+for($p=0;$p<count($picr);$p++)
+{
+$spicr=explode("::::::",$picr[$p]);
+?>
+                        <li>
+                            <div class="media"><img src="<?=$spicr[1]?>" class="item-pic" width="320" alt="[!--title--]" ></div>
+                        </li>
+                        <?php
+}
+?>
+                    </ul>
+                    <div class="prev">1</div>
+                    <div class="next">2</div>
+                </div>
+            </div>
+            <div id="mc-guess" class="mc-box clearfix">
+                <div class="head clearfix">
+                    <div class="title">猜你喜欢</div>
+                </div>
+                <div class="tabs clearfix">
+                    <ul class="clearfix">
+                        <li><a target="_blank" href="/soft/sjyy/" class="active" title="社交应用" >社交应用</a></li>
+                        <li><a target="_blank" href="/soft/shrj/"  title="生活软件" >生活软件</a></li>
+                        <li><a target="_blank" href="/soft/xwrj/"  title="新闻软件" >新闻软件</a></li>
+                        <li><a target="_blank" href="/soft/yyyl/"  title="影音娱乐" >影音娱乐</a></li>
+                        <li><a target="_blank" href="/soft/gjrj/"  title="工具软件" >工具软件</a></li>
+                        <li><a target="_blank" href="/soft/tsyd/"  title="图书阅读" >图书阅读</a></li>
+                        <li><a target="_blank" href="/soft/swrj/"  title="商务软件" >商务软件</a></li>
+                    </ul>
+                </div>
+                <div class="content clearfix"  >
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=33 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=33 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=37 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=37 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=52 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=52 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=35 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=35 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=38 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=38 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=46 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=46 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+                <div class="content clearfix"  style="display:none;">
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=36 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                    <div class="outer clearfix">
+                        <div class="list clearfix">
+                            [e:loop={"select * from www_moban5_cn_ecms_soft where classid=36 and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 6",6,24,0}]
+                            <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" class="clearfix"> <img src="<?=$bqr['titlepic']?>" width="96" height="96" alt="<?=$bqr['title']?>" >
+                                <div class="title"><?=$bqr['title']?></div>
+                                <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?>[!--titleurl--]&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                                    <div class="btn">查看详情</div>
+                                </div>
+                            </a> </div>
+                            [/e:loop]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+$keyb=explode(',',$navinfor[keyboard]);
+$tushu =count($keyb);
+if($navinfor[keyboard]=='' || $navinfor[keyboard]==null){}else{
+?>
+            <div id="mc-news" class="mc-box gax-box clearfix">
+                <div class="head clearifx">
+                    <div class="title">相关文章</div>
+                    <div class="more"> <a target="_blank" href="/yz/3_37.html" >更多>></a> </div>
+                </div>
+                <ul class="list clearfix">
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[0]%' order by newstime desc limit 12",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?php
+if($tushu==1){
+$num=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[0]%' order by newstime desc");
+                    $num2=12-$num;
+                    if($num2>0 || $num2==0){}else{$num2=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) order by newstime desc limit $num2",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==2){
+$num=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[0]%' order by newstime desc");
+                    $num201=12-$num;
+                    if($num201>0 || $num201==0){}else{$num201=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[1]%' order by newstime desc limit $num201",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==2){
+$num30=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and (title like '%$keyb[0]%' or title like '%$keyb[1]%') order by newstime desc");
+                    $num20=12-$num30;
+                    if($num20>0 || $num20==0){}else{$num20=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) order by newstime desc limit $num20",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==3){
+$num3=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[0]%' order by newstime desc");
+                    $num4=12-$num3;
+                    if($num4>0 || $num4==0){}else{$num4=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and (title like '%$keyb[1]%' or title like '%$keyb[2]%') order by newstime desc limit $num4",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==3){
+$num300=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and (title like '%$keyb[0]%' or title like '%$keyb[1]%' or title like '%$keyb[2]%') order by newstime desc");
+                    $num200=12-$num300;
+                    if($num200>0 || $num200==0){}else{$num200=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) order by newstime desc limit $num200",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==4){
+$num5=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and title like '%$keyb[0]%' order by newstime desc");
+                    $num6=12-$num-$num5;
+                    if($num6>0 || $num6==0){}else{$num6=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and (title like '%$keyb[1]%' or title like '%$keyb[2]%' or title like '%$keyb[3]%') order by newstime desc limit $num6",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                    <?php
+if($tushu==4){
+$num3000=$empire->gettotal("select count(*) as total from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) and (title like '%$keyb[0]%' or title like '%$keyb[1]%' or title like '%$keyb[2]%' or title like '%$keyb[3]%') order by newstime desc");
+                    $num2000=12-$num3000;
+                    if($num2000>0 || $num2000==0){}else{$num2000=0;}
+                    ?>
+                    [e:loop={"select * from www_moban5_cn_ecms_news where classid in (9,10,11,12,13,14) order by newstime desc limit $num2000",6,24,0}]
+                    <li><i class="dot"></i><a target="_blank" href="<?=$bqsr['titleurl']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                    <?
+}
+?>
+                </ul>
+            </div>
+            <?
+}
+?>
+            <div id="mc-download" class="mc-box clearfix">
+                <div class="head clearifx">
+                    <div class="title">相关下载</div>
+                </div>
+                <ul class="list clearfix">
+                    [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."' and isgood in (1,2,3,4,5,6,7,8,9) order by rand() desc limit 15",6,24,0}]
+                    <li><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><img width="32" src="<?=$bqr['titlepic']?>" alt="<?=$bqr['title']?>"><?=$bqr['title']?></a></li>
+                    [/e:loop]
+                </ul>
+            </div>
+            <div class="discuss-left" data-id="14776" data-type="1" id="comment">
+                <div class="dis-con">
+                    <div class="dis-tit">
+                        <h2 class="dis-title"> <span style="color:#404040">玩家评论</span> </h2>
+                    </div>
+                    <div class="dis-text">
+                        [!--temp.www_moban5_cn_cy--]
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-300 ml-15 ng">
+            <div class="rl-box clearfix">
+                <div class="head clearfix">
+                    <div class="title">本类下载排行</div>
+                </div>
+                <div class="list h524 clearfix rank">
+                    [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."'  order by onclick desc limit 1",6,24,0}]
+                    <div class="s" open-type="first">
+                        <div class="item media clearfix first" > <i class="num fn">1</i>
+                            <div class="app"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><img src="<?=$bqr['titlepic']?>"  alt="<?=$bqr['title']?>" width="80" height="80" /></a>
+                                <div class="body">
+                                    <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                                    <div class="row"><span class="s<?=$bqr['dengji']?>"></span></div>
+                                    <div class="row">大小: <?=$bqr['daxiao']?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item one clearfix" style="display:none;"> <i class="num fn">1</i>
+                            <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                            <div class="size"> <?=$bqr['daxiao']?></div>
+                        </div>
+                    </div>
+                    [/e:loop]
+                    [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."'  order by onclick desc limit 1,2",6,24,0}]
+                    <div class="s" open-type="one">
+                        <div class="item media clearfix first" style="display: none;"> <i class="num fn"><?=$bqno+1?></i>
+                            <div class="app"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><img src="<?=$bqr['titlepic']?>"  alt="<?=$bqr['title']?>" width="80" height="80" /></a>
+                                <div class="body">
+                                    <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                                    <div class="row"><span class="s<?=$bqr['dengji']?>"></span></div>
+                                    <div class="row">大小: <?=$bqr['daxiao']?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item one clearfix" style="display:block;"> <i class="num fn"><?=$bqno+1?></i>
+                            <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                            <div class="size"> <?=$bqr['daxiao']?></div>
+                        </div>
+                    </div>
+                    [/e:loop]
+
+                    [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."'  order by onclick desc limit 3,7",6,24,0}]
+                    <div class="s" open-type="one">
+                        <div class="item media clearfix first" style="display: none;"> <i class="num" style="background-color: #afafaf;"><?=$bqno+3?></i>
+                            <div class="app"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><img src="<?=$bqr['titlepic']?>"  alt="<?=$bqr['title']?>" width="80" height="80" /></a>
+                                <div class="body">
+                                    <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                                    <div class="row"><span class="s<?=$bqr['dengji']?>"></span></div>
+                                    <div class="row">大小: <?=$bqr['daxiao']?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item one clearfix" style="display:block;"> <i class="num" style="background-color: #afafaf;"><?=$bqno+3?></i>
+                            <div class="title"><a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"><?=$bqr['title']?></a></div>
+                            <div class="size"> <?=$bqr['daxiao']?></div>
+                        </div>
+                    </div>
+                    [/e:loop]
+                </div>
+            </div>
+            <div class="rem-box mt-15 clearfix app-rem">
+                <div class="head clearfix">
+                    <div class="title">精品推荐</div>
+                    <div class="pull-right"> <a target="_blank" href="#">换一换</a> </div>
+                </div>
+                <div class="content clearfix" style="">
+                    <div class="list clearifx">
+                        [e:loop={"select * from www_moban5_cn_ecms_soft where isgood in (1,2,3) order by newstime desc limit 9",6,24,0}]
+                        <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"> <img src="<?=$bqr['titlepic']?>" width="80" height="80" alt="<?=$bqr['title']?>"/>
+                            <div class="title"><?=$bqr['title']?></div>
+                        </a> </div>
+                        [/e:loop]
+                    </div>
+                </div>
+                <div class="content clearfix" style="display: none;">
+                    <div class="list clearifx">
+                        [e:loop={"select * from www_moban5_cn_ecms_soft where isgood in (1,2,3) order by newstime desc limit 9,9",6,24,0}]
+                        <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"> <img src="<?=$bqr['titlepic']?>" width="80" height="80" alt="<?=$bqr['title']?>"/>
+                            <div class="title"><?=$bqr['title']?></div>
+                        </a> </div>
+                        [/e:loop]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+[!--temp.www_moban5_cn_footer--]
+<div id="back-btn" style="display: none;"> <a href="#ct-bar">向上</a> </div>
+<script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.lazyload.min.js?v=1.1.1"></script>
+<script src="/moban5/static/home/assets/js/lib/jquery-scrolltofixed-min.js?v=1.1.1" charset="utf-8"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/app.js?v=1.1.1"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/comment.js?v=1.1.1"></script>
+<div style="display:none"><script src="[!--news.url--]e/public/ViewClick/?classid=[!--classid--]&id=[!--id--]&addclick=1"></script></div>
+</body>
+</html>

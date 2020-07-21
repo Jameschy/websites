@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link href="/dijiu/static/css/public_1.css" rel="stylesheet" type="text/css">
+    <script src="/dijiu/static/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/static/js/common.js"></script>
+
+    [!--temp.tomb--]
+
+</head>
+    
+<body>
+        <!--header开始-->
+        [!--temp.dijiu_w_header--]
+        <!--header结束-->
+        <div class="position wrap"><p>当前位置：<a href="/">首页</a>> 专题库</p></div>
+        <!--main-->
+        <div class="main wrap">
+            <div class="spbox">
+                <div class="sp-fl">
+                    <a class="on" href="/zt/">全部专题</a>
+                    <a class="" href="/zt/dnrjzt/">电脑软件专题</a>
+                    <a class="" href="/zt/sjrjzt/">手机软件专题</a>
+                    <a class="" href="/zt/sjyxzt/">手机游戏专题</a>
+                </div>
+                <div class="sp-mod">
+
+                        <div class="sp-list clearfix">
+                            [!--empirenews.listtemp--]
+                            <!--list.var1-->
+                            [!--empirenews.listtemp--]
+
+                            $smalltext=esub($r[smalltext],85);
+                            $listtemp='<a href="/[!--titleurl--]/"
+                                          target="_blank"
+                                          title="[!--title--]">
+                            <img src="[!--titlepic--]"
+                                 alt="[!--title--]" >
+                            <span>[!--title--]</span>
+                        </a>';
+
+
+
+                        </div>
+                        <div class="paging" id="pageBox">
+                            &nbsp;[!--show.listpage--]
+                        </div>
+
+                </div>
+            </div>
+        </div>
+        <!--footer开始-->
+        [!--temp.dijiu_w_footer--]
+    <!--footer结束-->
+    </body>
+</html>

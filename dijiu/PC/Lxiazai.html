@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <meta charset="UTF-8">
+    <link href="/moban5/static/home/assets/css/style.css?v=1.1.1" rel="stylesheet">
+    <link href="/moban5/static/home/assets/css/pinglun.css?v=1.1.1" rel="stylesheet">
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.1.8.3.min.js?v=1.1.1"></script>
+    <script type="text/javascript" src="/moban5/static/home/assets/js/lib/sly.min.js?v=1.1.1"></script>
+</head>
+<body oncopy="return false;" oncut="return false;">
+[!--temp.www_moban5_cn_header--]
+[!--temp.www_moban5_cn_bigdaohang--]
+[!--temp.www_moban5_cn_daohang--]
+<div id="hh-box" class="m-box mt-15 clearfix">
+    <div class="list clearfix">
+        [e:loop={"select * from www_moban5_cn_ecms_soft where classid='".$GLOBALS[navclassid]."' and isgood in (1,2,3,4,5,6) order by newstime desc limit 8",6,24,0}]
+        <div class="item"> <a target="_blank" href="<?=$bqsr['titleurl']?>" title="<?=$bqr['title']?>"> <img class="cover lazy"   data-original="<?=$bqr['titlepic']?>" src="/moban5/static/home/assets/images/common/loading-1.gif" width="96" height="96" alt="<?=$bqr['title']?>">
+            <div class="title"><?=$bqr['title']?></div>
+            <div class="qr" style="display: none"> <img src="/qr/api.php?url=<?=$public_r['add_www_moban5_cn_murl']?><?=$bqsr['titleurl']?>&p=10&m=4" width="96" height="96" alt="<?=$bqr['title']?>" />
+                <div class="btn">查看详情</div>
+            </div>
+        </a> </div>
+        [/e:loop]
+    </div>
+    <label class="label">热门</label>
+</div>
+<div id="guide-bar" class="m-box clearfix"> <i class="dot"></i>您当前所在位置：[!--newsnav--] > 最新软件 </div>
+<div class="m-box g5-box clearfix">
+    <div class="head clearfix">
+        <div class="title">最新软件</div>
+    </div>
+    <div class="list clearfix">
+        <div class="inner clearfix">
+            [!--empirenews.listtemp--]
+            <!--list.var1-->
+            [!--empirenews.listtemp--]
+        </div>
+    </div>
+    <div class="paginate clearfix">
+        <ul>
+            <div>
+                [!--show.listpage--]
+            </div>
+        </ul>
+    </div>
+</div>
+[!--temp.www_moban5_cn_footer--]
+<div id="back-btn" style="display: none;"> <a href="#ct-bar">向上</a> </div>
+<script type="text/javascript" src="/moban5/static/home/assets/js/lib/jquery.lazyload.min.js?v=1.1.1"></script>
+<script src="/moban5/static/home/assets/js/lib/jquery-scrolltofixed-min.js?v=1.1.1" charset="utf-8"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/app.js?v=1.1.1"></script>
+<script type="text/javascript" src="/moban5/static/home/assets/js/comment.js?v=1.1.1"></script>
+</body>
+</html>
