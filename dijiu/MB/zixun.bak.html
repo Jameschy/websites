@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="applicable-device" content="mobile" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link type="text/css" rel="stylesheet" href="/dijiu/css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <!--头部 start-->
+        [!--temp.dijiu_m_inHeader--]
+        <!--头部 end-->
+
+
+        <div class="article_list">
+            <ul id="nlists">
+                [!--empirenews.listtemp--]
+                <!--list.var1-->
+                [!--empirenews.listtemp--]
+            </ul>
+
+            <div class="page paginate clearfix">
+                <ul>
+                    [!--show.page--]
+                </ul>
+            </div>
+
+
+        </div>
+        </div>
+
+
+    <!--尾部 start-->
+    [!--temp.dijiu_m_footer--]
+    <!--尾部 end-->
+
+
+    </div>
+</body>
+<script src="/dijiu/js/jquery.min.js"></script>
+<script type="text/javascript" src="/dijiu/js/home.js"></script>
+<script type="text/javascript" src="/dijiu/js/common.js"></script>
+</html>
+
+$www_moban5_cn_url=$public_r['add_www_moban5_cn_url'];
+$listtemp='<li>
+    <a class="flex" href="[!--titleurl--]" title="[!--title--]">
+        <img src="'.$www_moban5_cn_url.'[!--titlepic--]" alt="[!--title--]">
+        <div class="info flex_grow">
+            <p>[!--title--]</p>
+            <p>[!--newstime--]</p>
+        </div>
+    </a>
+</li>';
+
+

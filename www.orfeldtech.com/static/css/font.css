@@ -1,0 +1,13 @@
+﻿/*
+Powered by ueeshop.com    http://www.ueeshop.com
+广州联雅网络科技有限公司    020-83226791
+*/
+@font-face{
+	font-family:"Whitney_Medium";
+	src:url("../fonts/font.woff2") format("woff2"),
+		url("../fonts/font.woff") format("woff"),
+		url("../fonts/font.ttf") format("truetype"),
+		url("../fonts/font.eot") format("embedded-opentype"),
+	font-weight:normal;
+	font-style:normal;
+}

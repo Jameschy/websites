@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta lang="en" /><link rel="canonical" href="https://www.orfeldtech.com/pages/our-company-38" />
+<link rel='shortcut icon' href='/u_file/1912/photo/e64638786e.png' />
+<meta name="keywords" content="Our Company" />
+<meta name="description" content="Our Company" />
+<title>Our Company</title>
+<link href='static/css/font.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/visual.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/global.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/global_1.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/user.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/effect.css' rel='stylesheet' type='text/css'  />
+<link href='static/css/style.css' rel='stylesheet' type='text/css'  />
+<script type='text/javascript' src='static/js/jquery-1.7.2.min.js' ></script>
+<script type='text/javascript' src='static/js/en.js' ></script>
+<script type='text/javascript' src='static/js/global.js' ></script>
+<script type='text/javascript' src='static/js/global.js' ></script>
+<script type='text/javascript' src='static/js/user.js' ></script>
+<script type='text/javascript' src='static/js/main.js' ></script>
+</head>
+
+<body class="lang_en" id="38">
+<link href='static/css/custom_style.css' rel='stylesheet' type='text/css' />
+	<script type="text/javascript">
+		$(window).resize(function(){$(window).webDisplay(0);});
+		$(window).webDisplay(0);
+						var ueeshop_config={
+			"domain":"https://www.orfeldtech.com",
+			"date":"2020/07/24 09:08:34",
+			"lang":"en",
+			"currency":"USD",
+			"currency_symbols":"$",
+			"currency_rate":"1.0000",
+			"FbAppId":"474059616761997",
+			"FbPixelOpen":"0",
+			"UserId":"0",
+			"TouristsShopping":"1",
+			"PaypalENV":"production",
+			"PaypalExcheckout":"",
+			"PaypalLoaclPayment":"",
+			"PaypalLang":"en_US",
+			"PaypalBusiness":"0",
+			"PaypalCreditCard":"0",
+			"tmp_dir":"/tmp/",
+			"IsMobile":0
+		}
+		window.onhashchange = function(){
+			if (document.location.pathname.indexOf('/cart/complete/') != -1) {
+				window.history.replaceState(null, null, '/cart/checkout.html');
+				window.history.go(0);
+			}
+		}
+	</script>
+	
+<div id="header" class="fix ">
+	<div class="wide">
+		<div class="logo fl"><a href="/"><img src="static/picture/c0fcafdeae.png" alt="ORFELD | Official Home" /></a></div>
+		<div class="func fr">
+			<div class="header_cart down_header_cart fr" lang="_en">
+				<a rel="nofollow" class="cart_inner" href="/cart/"><img src="static/picture/cart_icon.png" alt=""></a>
+				<div class="cart_note"></div>
+			</div>
+			<div class="sign_in fr ">
+                <div class="global_login_sec">
+	<div class="SignInButton_sec"></div>
+    <div class="signin_box_sec global_signin_module">
+    	<div class="signin_container themes_dropdown">
+            <form class="signin_form" name="signin_form" method="post" autocomplete="off">
+                <input name="Email" class="g_s_txt" type="text" autocomplete="off" maxlength="100" placeholder="Your Email Address" format="Email" notnull />
+                <div class="blank20"></div>
+                <input name="Password" class="g_s_txt" type="text" onfocus="this.type='password'" autocomplete="new-password" placeholder="Password" notnull />
+                <button class="signin FontBgColor" type="submit">Sign in</button>
+                <input type="hidden" name="do_action" value="user.login">
+            </form>
+            <div id="error_login_box" class="error_login_box"></div>
+                            <h4>Sign In With:</h4>
+                <ul>
+                    <script type='text/javascript' src='static/js/facebook.js' ></script>
+                        <li><fb:login-button scope="public_profile,email" onlogin="checkLoginState();" class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false" data-width="200px"></fb:login-button></li>
+                    <meta name="google-signin-scope" content="profile email"><meta name="google-signin-client_id" content="201795331893-8uiuo393nm4cq9ueb8cpkrcjg9c7ep71.apps.googleusercontent.com"><script src="static/js/platform.js" async defer></script><script type='text/javascript' src='static/js/google.js' ></script>
+                        <li id="google_login"><div class="g-signin2" id="google_btn" data-onsuccess="GoogleSignIn" data-theme="dark" data-login-status="">&nbsp;</div></li>
+                                    </ul>
+                        <div class="blank20"></div>
+            <a href="/account/sign-up.html" class="signup FontBorderColor FontColor">Join Free</a>
+            <a href="/account/forgot.html" class="forgot">Forgot your password?</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	user_obj.sign_in_init();
+		var timer;
+	$('.global_login_sec').hover(
+		function(){
+			clearTimeout(timer);
+			$(this).find('.SignInButton_sec').addClass('cur');
+			$(this).find('.signin_box_sec').show().css({'opacity':0, 'top':'150%'}).animate({'opacity':1, 'top':'100%'}, 200);
+		},
+		function(){
+			var _this=$(this);
+			timer=setTimeout(function(){
+				_this.find('.SignInButton_sec').removeClass('cur');
+				_this.find('.signin_box_sec').animate({'opacity':0, 'top':'150%'}, 200, function(){
+					$(this).hide();
+				});
+			},500);
+		}
+	);
+});
+</script>
+            </div>
+			<div class="search ajax_search fr" plugins="search-0" effect="0-1" plugins_pos="0">
+	            <form action="/search/" method="get" class="form">
+	                <input plugins_mod="Title" type="text" class="text fl" placeholder="" name="Keyword" value="" autocomplete="off" />
+	                <input type="submit" class="button fl FontBgColor" value="" />
+	                <div class="clear"></div>
+                    <a href="javascript:;" rel="nofollow" class="close"></a>
+	            </form>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="nav">
+			                <ul class="nav_item">
+                                        <li>
+                        <a class="FontColors" href="/collections/vacuum-cleaners-118">Vacuum Cleaners</a>
+                            <div class="nav_sec small_nav_sec">
+        <div class="top"></div>
+        <div class="nav_sec_box">
+            <div class="">
+                <div id="nav_sec_0" class="nav_list">
+					                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/cordless-stick-vacuums-372" title="Cordless Stick Vacuums">
+										Cordless Stick Vacuums										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/robot-vacuum-cleaners-373" title="Robot Vacuum Cleaners">
+										Robot Vacuum Cleaners										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/cylinder-vacuum-cleaners-374" title="Cylinder Vacuum Cleaners">
+										Cylinder Vacuum Cleaners										                                    </a>
+                                </dt>
+								                            </dl>
+						                    <div class="clear"></div>
+                </div>
+                <div class="nav_img ">
+					                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+                    </li>
+                                        <li>
+                        <a class="FontColors" href="/collections/tools-376">Tools</a>
+                            <div class="nav_sec small_nav_sec">
+        <div class="top"></div>
+        <div class="nav_sec_box">
+            <div class="">
+                <div id="nav_sec_1" class="nav_list">
+					                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/power-tools-377" title="Power Tools">
+										Power Tools										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/hand-tools-378" title="Hand Tools">
+										Hand Tools										                                    </a>
+                                </dt>
+								                            </dl>
+						                    <div class="clear"></div>
+                </div>
+                <div class="nav_img ">
+					                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+                    </li>
+                                        <li>
+                        <a class="FontColors" href="/collections/accessories-375">Accessories</a>
+                            <div class="nav_sec small_nav_sec">
+        <div class="top"></div>
+        <div class="nav_sec_box">
+            <div class="">
+                <div id="nav_sec_2" class="nav_list">
+					                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/vacuum-cleaner-c10a-380" title="Vacuum Cleaner (C10A)">
+										Vacuum Cleaner (C10A)										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/vacuum-cleaner-h20a-381" title="Vacuum Cleaner (H20A)">
+										Vacuum Cleaner (H20A)										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/vacuum-cleaner-660-382" title="Vacuum Cleaner (660)">
+										Vacuum Cleaner (660)										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/vacuum-cleaner-679-383" title="Vacuum Cleaner (679)">
+										Vacuum Cleaner (679)										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/power-tools-379" title="Power Tools">
+										Power Tools										                                    </a>
+                                </dt>
+								                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="/collections/vacuum-cleaner-others-384" title="Vacuum Cleaner (Others)">
+										Vacuum Cleaner (Others)										                                    </a>
+                                </dt>
+								                            </dl>
+						                    <div class="clear"></div>
+                </div>
+                <div class="nav_img ">
+					                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+                    </li>
+                                        <li>
+                        <a  href="https://www.orfeldtech.com/blog/" target="_blank">Blog</a>
+                                            </li>
+                                        <li>
+                        <a class="FontColors" href="https://www.orfeldtech.com/art/product-registration-a0043.html" target="_blank">Support</a>
+                            <div class="nav_sec small_nav_sec">
+        <div class="top"></div>
+        <div class="nav_sec_box">
+            <div class="">
+                <div id="nav_sec_4" class="nav_list">
+					                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="www.orfeldtech.com/support/troubleshooting" title="Troubleshooting">
+										Troubleshooting                                    </a>
+                                </dt>
+                            </dl>
+						                            <dl class="nav_sec_item">
+                                <dt>
+                                    <a class="nav_sec_a" href="www.orfeldtech.com/support/warranty" title="Warranty">
+										Warranty                                    </a>
+                                </dt>
+                            </dl>
+						                    <div class="clear"></div>
+                </div>
+                <div class="nav_img ">
+					                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+                    </li>
+                                    </ul>
+            		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+    <div class="header_filling"></div>
+<div id="main" class="wide">
+	<div id="location">
+		Your position: <a href="/">Home</a>
+		 /
+		 <a href="/pages/our-company-38">Our Company</a>
+	</div>
+	<div class="article_content_box">
+		<h1 class="main_title" >Our Company</h1>		<div class="main_content editor_txt"><p align="left 33">At Orfeld, we aim to manufacture the best products that inspire our consumers to live a more convenient, secure lifestyle.<br />
+<br />
+We have our professional products monitoring team to focus on every single detail that matters to you and develop well-made, portable, exquisite products.<br />
+ </p>
+
+<p align="left">As important as the high quanlity of products, is our attractive price. We always lead the path of similar companies to provide you with all the convenience at a revolutionary price.<br />
+ </p>
+
+<p align="left">Today, we have three ranges of products within Home Cleaning, Power Tools, Hand Tools.<br />
+<br />
+Orfeld is a top ranked global Amazon seller, and has distribution partners in over 50 countries throughout the Middle East, South East Asia, North and Eastern Europe, and Latin America. We&#39;re committed to creating solid products backed by friendly, responsive service to delight our loyal customers around the world.Together, with your help, we are still growing and shaping ourselves to get better and offer you the most fascinating shopping experience.<br />
+ </p>
+
+<p align="left">Contact Us: We sincerely hope you could send us an email if you have any questions or suggestions.</p></div>
+	</div>
+</div>
+<div id="footer_outer">
+	<div class="wide">
+					<dl class="fore">
+				<dt>About Orfeld</dt>
+				<dd>
+					                        <a href="/pages/our-company-38"  title="Our Company">Our Company</a>                                            <a href="/pages/where-to-buy"  title="Where to Buy">Where to Buy</a>                    				</dd>
+			</dl>
+					<dl class="fore">
+				<dt>After Sales Service</dt>
+				<dd>
+					                        <a href="/pages/warranty-info"  title="Warranty">Warranty</a>                                            <a href="/pages/privacy-policy-41"  title="Privacy Policy">Privacy Policy</a>                                            <a href="/pages/terms-conditions-42"  title="Terms & Conditions">Terms & Conditions</a>                    				</dd>
+			</dl>
+					<dl class="fore">
+				<dt>For business</dt>
+				<dd>
+									</dd>
+			</dl>
+				<dl class="newsletter">
+			<dt>Subscribe to Our Newsletter</dt>
+	        <form id="newsletter_form">
+				<input type="text" class="text fl" name="Email" value="" notnull="" format="Email" placeholder="Enter your email address"/>
+				<input type="submit" class="button FontBgColor fl" value="SUBSCRIBE" />
+				<div class="clear"></div>
+			</form>
+				            <div class="share">
+	                <span>FOLLOW US</span>
+	                <div class="follow_us_list follow_us_type_0 clearfix">
+	<ul>
+    				<li><a rel="nofollow" class="icon_follow_facebook" href="www.facebook.com/orfeldtech" target="_blank" title="Facebook">Facebook</a></li>
+        	</ul>
+</div>	                <div class="clear"></div>
+	            </div>
+	        	    </dl>
+	    <span class="br"></span>
+	    <div class="clear"></div>
+    </div>
+</div>
+<div id="footer">
+	<div class="wide">
+		<div class="func fr" id="toper">
+								</div>
+    	<div class="foot_copy copyright fl">Copyright © 2019 Orfeld All Rights Reserved. &nbsp;&nbsp;&nbsp;&nbsp; <a href="https://www.ueeshop.com" target="_blank" rel="nofollow">POWERED BY UEESHOP</a></div>
+    	<div class="clear"></div>
+		<div class="pay"></div>
+    </div>
+</div>
+<div id="chat_window">
+    <div class="chat_box ">
+        <div class="box">
+                    </div>
+        <div class="menu">
+                        <a href="javascript:;" id="go_top" class="top"></a>
+        </div>
+    </div>
+</div>
+<div id="facebook-messenger" class="message_us"><a href="https://m.me/279020482781231" target="_blank"><img src="static/picture/message-us-blue.png" alt="Message Us" /></a></div>    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="static/js/xfbml.customerchat.js"></script>
+    <script type="text/javascript">
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId           : '474059616761997',
+            autoLogAppEvents: true,
+            cookie          : true,
+            xfbml           : true,
+            version         : 'v3.2'
+        });
+
+    };
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+<div align="center"><script type='text/javascript' src='static/js/analytics.js' async></script><script type="text/javascript">
+	$('#b_header .rightbar .nav .item a').attr('target','_self');
+</script></div></body>
+</html>

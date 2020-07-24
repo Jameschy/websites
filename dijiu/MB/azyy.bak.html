@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+000
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="applicable-device" content="mobile" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link type="text/css" rel="stylesheet" href="/dijiu/css/common.css">
+    <script src="/dijiu/js/jquery-1.8.3.min.js"></script>
+    <script src="/dijiu/js/common.js"></script>
+</head>
+<body>
+<!--头部-->
+[!--temp.dijiu_m_header--]
+<!--头部-->
+
+<div class="appbox">
+
+    <ul class="app-list clearfix" id="fm">
+
+        [e:loop={"select * from [!db.pre!]enewsclass where bclassid=32 order by infos desc",0,24,0}]
+        <li class="item">
+            <a href="/<?=$bqr[classpath]?>/" title="<?=$bqr[classname]?>">
+                <div class="title"><?=$bqr[classname]?></div>
+                <small><?=$bqr[infos]?>+款应用</small>
+            </a>
+        </li>
+        [/e:loop]
+
+    </ul>
+    <!--<div class="paging">-->
+    <!---->
+    <!--</div>-->
+</div>
+<!--头部-->
+[!--temp.dijiu_m_footer--]
+<!--头部-->
+<a class="backTop" href="#">返回顶部</a>
+</body>
+</html>
