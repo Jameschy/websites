@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes"/>
+    <title>软件游戏标签汇总-第九软件站</title>
+    <meta name="keywords" content="软件,游戏,第九,软件站">
+    <meta name="description" content="此栏目为:第九软件站-软件游戏标签汇总,该频道汇总了软件游戏关键字标签。">
+    <link type="text/css" rel="stylesheet" href="/dijiu/css/common.css">
+</head>
+<script src="/dijiu/js/jquery-1.8.3.min.js"></script>
+<script src="/dijiu/js/common.js"></script>
+</head>
+
+<body>
+<!--头部-->
+[!--temp.dijiu_m_header--]
+<!--头部-->
+
+<div class="tagsbox">
+    <div class="mod-tit">
+        <h3>软件标签</h3>
+    </div>
+    <div class="tags-list">
+        [e:loop={"select * from [!db.pre!]enewstags order by num desc",0,24,0}]
+        <?php
+$clsNum = mt_rand(12, 20);
+$clsNumb= mt_rand(0, 6);
+$clsNumc= mt_rand(0, 9);
+
+?>
+
+        <a href="/tag/<?=$bqr['tagname']?>/"
+           target="_blank"
+           class="f<?=$clsNum?> fb<?=$clsNumb?> fc<?=$clsNumc?>">
+            <?=$bqr['tagname']?><em>(<?=$bqr['num']?>)</em>
+        </a>
+        [/e:loop]
+
+    </div>
+
+</div>
+</div>
+
+<!--footer-->
+[!--temp.dijiu_m_header--]
+<!--footer-->
+
+<a class="backTop" href="#">返回顶部</a>
+</body>
+</html>

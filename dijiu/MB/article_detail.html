@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="applicable-device" content="mobile" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+    <title>[!--pagetitle--]_<?=$public_r['add_www_moban5_cn_name']?></title>
+    <meta name="keywords" content="[!--pagekey--]" />
+    <meta name="description" content="[!--pagedes--]" />
+    <link type="text/css" rel="stylesheet" href="/dijiu/css/style.css">
+</head>
+<body>
+<div class="wrap">
+    <!--头部-->
+    [!--temp.dijiu_m_inHeader--]
+    <!--头部-->
+
+    <!--文章-->
+    <div class="news_detail">
+
+        <h1>[!--title--]</h1>
+        <p class="tips">
+            <span>[!--newstime--]</span>
+            <span>来源<? if($navinfor['writer']=="") {echo "佚名";}else{echo $navinfor[writer];}?> </span>
+        </p>
+        <div class="cont" id="detailCont">
+            [!--newstext--]
+        </div>
+        <p class="show-more" data-num="0"><i>显示全部</i>
+            <i style="display:block; position:absolute; width:100%; height:40px;background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));bottom:50px"></i>
+        </p>
+    </div>
+    <!--文章-->
+    <!--猜你喜欢-->
+    <div class="info-bottom artSelect">
+        <div class="d_title"><em>猜你喜欢</em></div>
+        <div class="tags-main-box androidSelect">
+            <ul class="news-box-ul">
+
+                [e:loop={"select * from [!db.pre!]ecms_news where classid='".$GLOBALS[navclassid]."' order by rand() desc limit 8",6,24,0}]
+
+                <li>
+                    <a href="<?=$bqsr['titleurl']?>" class="img">
+                        <span><?=esub($bqr[title],32,'…')?></span>
+                        <span><?=date("Y-m-d",$bqr[newstime])?></span>
+                    </a>
+                </li>
+
+                [/e:loop]
+
+            </ul>
+        </div>
+    </div>
+    <!--猜你喜欢-->
+
+    <!--相关软件-->
+    <div class="info-bottom artSelect">
+        <div class="d_title"><em>相关软件</em></div>
+        <div class="tags-main-box androidSelect">
+            <ul class="tags-box-ul">
+
+                [e:loop={"select * from [!db.pre!]ecms_soft order by rand() desc limit 8",6,24,0}]
+
+                <li>
+                    <a href="<?=$bqsr['titleurl']?>" class="img">
+                        <img src="<?=$public_r['add_www_moban5_cn_url']?><?=$bqr['titlepic']?>"
+                             alt="<?=$bqr['title']?>" >
+                        <span><?=$bqr['title']?></span>
+                    </a>
+                </li>
+
+                [/e:loop]
+
+            </ul>
+        </div>
+    </div>
+    <!--相关软件-->
+
+    <!--尾部 start-->
+    [!--temp.dijiu_m_footer--]
+    <!--尾部 end-->
+</div>
+</body>
+<script src="/dijiu/js/jquery.min.js"></script>
+<script type="text/javascript" src="/dijiu/js/info.js"></script>
+<script type="text/javascript" src="/dijiu/js/common.js"></script>
+</html>
