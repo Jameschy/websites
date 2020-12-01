@@ -1,0 +1,88 @@
+/*
+*@name:detail.css
+*@author:JamesChy
+*@date:2020/11/23 9:39
+*@desc:admins
+*@update:2020/11/23 9:39
+*/
+
+.newstext-box{
+    min-height: 800px;
+}
+
+.lbox1-1 .sec-title.mrb-1 {
+    text-align: center;
+    margin: 36px auto;
+}
+.sec-content{
+    /*text-align: center;*/
+}
+
+.sec-content .cont-time {
+    text-align: center;
+    font-size: 14px;
+    color: darkgray;
+    margin: 15px auto;
+}
+
+.cont-table table{
+    width: 100%;
+}
+.cont-table table,
+.cont-table tr,
+.cont-table td,
+.cont-table th{
+    border: 1px solid #d5d9dc;
+    text-align: left;
+    text-indent: 24px;
+    line-height: 36px;
+}
+
+
+.site-logo{
+    text-align: center!important;
+}
+.site-logo img{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+.sec-content .cont-breif {
+    font-size: 14px;
+    color: darkgray;
+    margin: 15px auto;
+    text-indent: 36px;
+    line-height: 20px;
+    background-color: #FFFAF0;
+    padding: 15px 9px;
+
+}
+.sec-content .cont-news p{
+    margin: 10px auto;
+    line-height: 26px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-indent: 36px;
+    color: #333;
+}
+
+.cont-state {
+    background-color: floralwhite;
+    font-size: 14px;
+    color: darkgray;
+    margin: 31px auto;
+    line-height: 24px;
+    background-color: #FFFAF0;
+    padding: 15px 20px;
+}
+
+.cont-state a {
+    color: #b4000d;
+}
+.rbox2-1 .info-box li {
+    padding: 2px 5px;
+    margin: 5px 5px;
+    border: 1px solid #BBBBBB;
+    border-radius: 3px;
+}
+

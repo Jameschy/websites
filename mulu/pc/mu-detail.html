@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>详情内页</title>
+    <meta name="description" content=""/>
+    <link rel="icon" type="image/icon" href="static/img/favicon16.ico">
+    <link rel="stylesheet" href="static/common.css"/>
+    <link rel="stylesheet" href="static/category.css"/>
+    <link rel="stylesheet" href="static/detail.css"/>
+</head>
+<body>
+<div class="ml-wrap">
+
+    <!--公共头部-->
+    <header class="ml-header">
+        <div class="header-box">
+            <div class="w1200 fl-c">
+                <div class="hbox-left fl-l">
+                    <div id="showtime">2020/11/12 上午10:40:25 星期四</div>
+                    <script>
+                        setInterval("showtime.innerHTML=new Date().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+                    </script>
+                </div>
+                <div class="hbox-center fl-l">
+                    <iframe width="310" scrolling="no" height="25" frameborder="0" allowtransparency="true"
+                            src="http://i.tianqi.com/index.php?c=code&amp;id=40&amp;icon=1&amp;num=3"></iframe>
+                </div>
+                <div class="hbox-right fl-r">
+                    <a>分类目录交流与收录QQ群130244283</a> |
+                    <a href="e/DoInfo/ChangeClass.php?mid=10" target="_blank">网站提交</a> |
+                    <a href="/e/member/register/ChangeRegister.php" target="_blank">会员注册</a>
+                </div>
+            </div>
+        </div>
+        <div class="logo-box">
+            <div class="logo-box w1200 fl-c">
+                <div class="lbox-left fl-l">
+                    <a href="/" target="_blank"><img src="static/img/logo-x.png"></a>
+                </div>
+                <div class="lbox-center fl-l">
+                    <div class="logo_search_1">
+                        <form class="haosou_form" method="post" action="/e/search/index.php">
+                            <input type="hidden" name="show" value="pro,city,title,weburl">
+                            <input type="hidden" value="1" name="tempid">
+                            <input type="hidden" value="url" name="tbname">
+                            <input name="mid" value="1" type="hidden">
+                            <input name="dopost" value="search" type="hidden">
+                            <input class="search_input" id="haosou_input" name="keyboard" type="text"
+                                   placeholder="输入域名或关键词">
+                            <button class="search_btn" id="haosou_submit" name="submit" type="submit">搜索</button>
+                        </form>
+                    </div>
+
+                    <div class="logo_search_lei">
+                        <div class="lei_text">
+                            <a href="/tags/tag-239/" target="_blank" title="有46个与新闻相关的网站">新闻</a>
+                            <a href="/tags/tag-295/" target="_blank" title="有45个与论坛相关的网站">论坛</a>
+                            <a href="/tags/tag-371/" target="_blank" title="有44个与娱乐相关的网站">娱乐</a>
+                            <a href="/tags/tag-811/" target="_blank" title="有40个与手机游戏相关的网站">手机游戏</a>
+                            <a href="/tags/tag-374/" target="_blank" title="有37个与网页游戏相关的网站">网页游戏</a>
+                            <a href="/tags/tag-567/" target="_blank" title="有34个与社区相关的网站">社区</a>
+                            <a href="/tags/tag-836/" target="_blank" title="有32个与网络游戏相关的网站">网络游戏</a>
+                            <a href="/tags/tag-463/" target="_blank" title="有32个与时尚相关的网站">时尚</a>
+                            <a href="/tags/tag-392/" target="_blank" title="有29个与视频相关的网站">视频</a>
+                            <a href="/tags/tag-1268/" target="_blank" title="有28个与图片相关的网站">图片</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lbox-right fl-r">
+                    <a href="/" target="_blank">
+                        <img src="static/img/ad.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--公共头部-->
+
+    <!--公共菜单-->
+    <nav class="ml-nav bg-dark">
+        <div class="nav-center w1200">
+            <ul class="fl-c">
+                <li class="seleted"><a href="/">首页</a></li>
+                <li class=""><a href="/a/">最新收录TOP</a></li>
+                <li class=""><a href="/remen/">热门站点</a></li>
+                <li class=""><a href="/tui/">推荐站点</a></li>
+                <li class=""><a href="/12/">电脑网络</a></li>
+                <li class=""><a href="/19/">综合其它</a></li>
+                <li class=""><a href="/24/">休闲娱乐</a></li>
+                <li class=""><a href="/16/">教育文化</a></li>
+                <li class=""><a href="/33/">生活服务</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--公共菜单-->
+
+    <!--统计banner-->
+    <div class="ml-banner w1200 fl-c">
+        <div class="banner_left fl-l">
+            数据统计：<span style="color:#d50000;">111  </span>
+            个主题分类，<span style="color:#d50000;">1740  </span>
+            个优秀站点，<span style="color:#d50000;">22</span>
+            个站点正在排队审核，今日收录<span style="color:#d50000;">0</span>
+            个网站，<span style="color:#d50000;"></span>
+        </div>
+        <div class="banner_right fl-r">
+            网站合作<span>联系</span>
+            QQ，<a href="#" target="_blank" class="c-red">完全</a>
+            免费：
+            <a target="blank" class="dis-ib vt-s"
+               href="http://wpa.qq.com/msgrd?V=3&amp;uin=6819601&amp;Site=QQ客服&amp;Menu=yes">
+                <img border="0" src="static/img/webqq.png" alt="点击这里给我发消息">
+            </a>
+        </div>
+    </div>
+    <!--统计banner-->
+
+
+    <!--首页主体-->
+
+    <main class="ml-main w1200 fl-c">
+        <div class="main-c cbox1">
+            <section class="mc-box">
+                <div class="mc-title">
+                    <i class="title-icon">荐</i>
+                    推荐网站
+                </div>
+                <div class="mc-bd">
+                    <ul>
+
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度联盟</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度联盟广告</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度联盟广告</a>
+                        </li>
+
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">腾讯</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">腾讯新闻</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">腾讯游戏</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">公众号平台</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">百度</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">微信小程序</a>
+                        </li>
+                        <li>
+                            <img src="static/img/tj.gif" alt="">
+                            <a href="###">新浪微博</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--麵包屑-->
+        <div class="breadcrumb w1200 mrc-h">
+            当前位置：首页>>>> <a href="###">最新排行</a>>>>> 飞猪网正文
+        </div>
+        <!--麵包屑-->
+
+        <aside class="main-l lbox1 newstext-box">
+            <section class="sec-box lbox1-1">
+                <h1 class="sec-title mrb-1">
+                    <span>飞猪网</span>
+                </h1>
+
+
+                <div class="sec-content">
+                    <div class="cont-time">
+                        <span>時間：2020-11-23</span>|
+                        <span>來源：網絡</span>|
+                        <span>作者：慕柳先生</span>
+                    </div>
+
+                    <div class="cont-table">
+                        <div align="center">
+                            <table border="2">
+                                <tr>
+                                    <th colspan="1">名称</th>
+                                    <th colspan="1">飞猪网</th>
+                                    <th rowspan="5" class="site-logo">
+                                        <img src="static/img/blogo_y.png" width="100" height="100" alt="">
+                                    </th>
+                                    <!--<th rowspan="2">工作内容</th>-->
+                                    <!--<th rowspan="2">计量单位</th>-->
+                                    <!--<th colspan="2">计划任务</th>-->
+                                    <!--<th>实际完成</th>-->
+                                    <!--<th>质量签订</th>-->
+                                    <!--<th>调整单价</th>-->
+                                    <!--<th>应付工资</th>-->
+                                    <!--这里应把多余的列删除，不然就会多出一些列-->
+                                </tr>
+                                <tr>
+                                    <td>域名</td>
+                                    <td>www.fz.com</td>
+                                    <!--<td>工程数量</td>-->
+                                    <!--<td>计价单价</td>-->
+                                    <!--<td>验收数量</td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--这里应把多余的列删除，不然就会多出一些列-->
+                                </tr>
+                                <tr>
+                                    <td>备案号</td>
+                                    <td>京ICP备12008860号-1</td>
+
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>所属地区</td>
+                                    <td>北京</td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>所属分类</td>
+                                    <td>旅游</td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>权重</td>
+                                    <td colspan="2">
+                                        <span>百度：4</span>
+                                        <span>搜狗：4</span>
+                                        <span>360：4</span>
+                                        <span>谷歌：4</span>
+                                        <span>深马：4</span>
+                                    </td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>网站关键词</td>
+                                    <td colspan="2">旅游攻略 旅游景点排行 旅游目的地推荐</td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>热度</td>
+                                    <td colspan="2">
+                                        <span>百度：4</span>
+                                    </td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>Alex排名</td>
+                                    <td colspan="2">
+                                        <span>36665</span>
+                                    </td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                                <tr>
+                                    <td>收录时间</td>
+                                    <td colspan="2">
+                                        <span>2020-11-23</span>
+                                    </td>
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                    <!--<td></td>-->
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="cont-breif">
+                        站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量
+                    </div>
+                    <div class="cont-news">
+<p>
+                    站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+</p>
+                        <p>
+                            站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+                        </p>
+                        <p>
+                            站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+                        </p>
+                        <p>
+                            站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+                        </p>
+                        <p>
+                            站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+                        </p>
+                        <p>
+                            站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,
+                        </p>
+                        <p>
+
+                       未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来站长之家是党中央交由团中央主办的面向全国未成年人的专属网站,内容覆盖国内外综合新闻资讯、生活资讯,设幼儿、小学、中学、红领巾等专栏、频道,弘扬社会主义核心价值观,传递正能量,未来网上有未来
+                        </p>
+                    </div>
+                </div>
+                <div class="item-pagetion mrt-2">
+                    <span><a href="###">上一页</a></span>
+                    <span><a href="###">首页</a></span>
+                    <span><a href="###">1</a></span>
+                    <span><a href="###">2</a></span>
+                    <span><a href="###">3</a></span>
+                    <span>...</span>
+                    <span><a href="###">尾页</a></span>
+                    <span><a href="###">下一页</a></span>
+                </div>
+
+                <div class="cont-state">
+                    <p>版权声明：</p>
+                    <p>1、0027.com该老域名由SEO优化一点通目录编辑整理上传并发布，SEO优化一点通目录不拥有所有权。</p>
+                    <p>2、SEO优化一点通目录仅提供信息发布平台，不承担相关法律责任。</p>
+                    <p>3、文章仅代表作者个人观点，不代表SEO优化一点通目录立场，未经作者许可，不得转载。</p>
+                    <p>4、如果发现本站有涉嫌抄袭的内容，欢迎举报，并提供相关证据，一经查实，本站将立刻删除涉嫌侵权内容。
+    </p>
+                    <p>本文链接：<a href="###"> http://www.dxbsm.cn/shoulu/9741.html</a>转载请注明</p>
+                </div>
+                <div class="cont-pager">
+                    <div>
+                       <p>上一页：<span><a href="###">赶集网</a></span></p>
+                       <p>下一页：<span><a href="###">淘宝网</a></span></p>
+                    </div>
+                </div>
+
+            </section>
+
+        </aside>
+        <aside class="main-r rbox1">
+            <section class="sec-box rbox1-1 hots-box">
+                <h1 class="sec-title mrb-1">
+                    <span>推荐网址TOP10</span>
+                </h1>
+                <ul class="sec-bd news-box">
+                    <li><a href="###">金鹰网 <span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">站长之家<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">故事米<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">人民日报<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">南海经营<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">金鹰网<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">站长之家<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">故事米<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">人民日报<span class="fl-r">www.jyw.com</span></a></li>
+                    <li><a href="###">南海经营<span class="fl-r">www.jyw.com</span></a></li>
+                </ul>
+            </section>
+            <section class="sec-box rbox1-2 hots-box">
+                <h1 class="sec-title mrb-1">
+                    <span>今日热点</span>
+                </h1>
+                <ul class="sec-bd news-box">
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                    <li><a href="###">青海两起泥石流流灾害 2人遇难... <span class="fl-r c-lblue">11-22</span></a></li>
+                </ul>
+            </section>
+            <section class="sec-box rbox2-1 tags-box">
+                <h1 class="sec-title mrb-1">
+                    <span>热门标签</span>
+                </h1>
+                <ul class="sec-bd info-box">
+                    <li><a href="###">收录排名(12)</a></li>
+                    <li><a href="###">SEO[12]</a></li>
+                    <li><a href="###">建站技巧[16]</a></li>
+                    <li><a href="###">帝国CMS[1]</a></li>
+                    <li><a href="###">织梦漏洞[33]</a></li>
+                    <li><a href="###">下载站[52]</a></li>
+                    <li><a href="###">诗词古文[162]</a></li>
+                    <li><a href="###">小说站[125]</a></li>
+                    <li><a href="###">采集器[120]</a></li>
+                    <li><a href="###">伪原创[102]</a></li>
+                    <li><a href="###">收录排名(12)</a></li>
+                    <li><a href="###">SEO[12]</a></li>
+                    <li><a href="###">建站技巧[16]</a></li>
+                    <li><a href="###">帝国CMS[1]</a></li>
+                    <li><a href="###">织梦漏洞[33]</a></li>
+                    <li><a href="###">下载站[52]</a></li>
+                    <li><a href="###">诗词古文[162]</a></li>
+                    <li><a href="###">小说站[125]</a></li>
+                    <li><a href="###">采集器[120]</a></li>
+                    <li><a href="###">伪原创[102]</a></li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="fl-c"></div>
+        <aside class="main-b mrt-h friend-link">
+            <section>
+                <h1 class="sec-title mrb-1">
+                    <span>热门标签</span>
+                </h1>
+                <ul class="mrc-h">
+                    <li><a href="http://7017online.xyz">7017在线</a></li>
+                    <li><a href="####">卢松松</a></li>
+                    <li><a href="####">卢松松</a></li>
+                    <li><a href="####">杨青青</a></li>
+                    <li><a href="####">菲利亚</a></li>
+                    <li><a href="####">奥克斯</a></li>
+                    <li><a href="####">大理藜芦</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+    <!--首页主体-->
+
+    <!--公共底部-->
+    <footer class="ml-footer">
+        <section class="w1200 footer-1">
+            <div class="fl-l bt-logo">
+                <img src="static/img/blogo.png" alt="">
+            </div>
+            <div class="fl-l bt-sitemsg">
+                <ul>
+                    <li><a href="###">关于我们</a></li>
+                    |
+                    <li><a href="###">广告合作</a></li>
+                    |
+                    <li><a href="###">免责声明</a></li>
+                    |
+                    <li><a href="###">版权声明</a></li>
+                    |
+                    <li><a href="###">友情链接</a></li>
+                    |
+                    <li><a href="###">网站地图</a></li>
+                </ul>
+                <p>Powered by © 2008-2020 - 版权所有：百利搜|百利收</p>
+                <p>备案号：苏ICP备20201205号-1</p>
+                <p><i>0</i>苏ICP备20201205号-1| <i>0</i>中国互联网举报中心</p>
+            </div>
+            <div class="fl-l bt-qrcode">
+                <img src="static/img/weixinqr.png" alt="qrcode">
+            </div>
+            <div class="fl-c"></div>
+        </section>
+    </footer>
+    <!--公共底部-->
+</div>
+</body>
+</html>
