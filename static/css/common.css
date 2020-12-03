@@ -1,0 +1,39 @@
+/*
+*@name:common.css.css
+*@author:JamesChy
+*@date:2020/12/1 15:01
+*@desc:admins
+*@update:2020/12/1 15:01
+*/
+
+body{
+    text-align: center;
+    background-color: #EEEEEE;
+}
+.main{
+    max-width: 1200px;
+    background-color: #ffffff;
+    min-height: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.aside-left{
+    float: left;
+    width: 49%;
+}
+.aside-right{
+    float: right;
+    width: 49%;
+}
+.aside ul{
+    padding: 0;
+}
+.aside li{
+    list-style: none;
+    line-height: 48px;
+}
+.aside li a{
+    text-decoration: none;
+    /*color: #333333;*/
+}
