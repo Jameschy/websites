@@ -1,0 +1,178 @@
+/*
+*@name:common.css
+*@author:JamesChy
+*@create-date:2020/11/12 17:49:22
+*@desc: For——公共CSS
+*@update:2020/11/12 17:49:22
+*/
+
+/*样式重置*/
+html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+/* custom */
+a {
+    outline: none;
+    color: #333333;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+a:focus {
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: -webkit-focus-ring-color auto 0;
+}
+
+/*Pub-自定义*/
+
+    /*字体颜色*/
+.c-blue{color: #00A0E8;}
+.c-dark{color: #000000;}
+.c-green{color: #7ca934;}
+.c-grey{color: #aaaaaa;}
+.c-orange{color: #e66d15;}
+.c-pink{color: #ffd9d9;}
+.c-red{color: #dd4343;}
+.c-yellow{color: #f8bc06;}
+.c-lblue{color: #828a92;}
+
+    /*背景颜色*/
+.bg-blue{background-color: #00A0E8;}
+.bg-dark{background-color: #000000;}
+.bg-green{background-color: #7ca934;}
+.bg-grey{background-color: #aaaaaa;}
+.bg-orange{background-color: #e66d15;}
+.bg-pink{background-color: #ffd9d9;}
+.bg-red{background-color: #dd4343;}
+.bg-yellow{background-color: #f8bc06;}
+
+    /*固定限宽*/
+.w960{width: 960px;margin: 0 auto;}
+.w1000{width: 1000px;margin: 0 auto;}
+.w1200{width: 1200px;margin: 0 auto;}
+
+.wp30{width: 300px;}
+.wp70{width: 900px;}
+
+    /*弹性限宽*/
+.max-w960{max-width: 960px;width: auto;}
+.max-w1000{max-width: 1000px;width: auto;}
+.max-w1200{max-width: 1200px;width: auto;}
+
+    /*浮动*/
+.fl-r{float: right;}
+.float-left{float: left;}
+.fl-n{float: none;}
+.fl-c:after{content: "";display: block;height: 0;clear:both;visibility: hidden;}
+.fl-c{*zoom: 1;}
+
+    /*文本属性*/
+.fs-12{font-size: 12px;}
+.fs-14{font-size: 14px;}
+.fs-16{font-size: 16px;}
+.fs-18{font-size: 16px;}
+.fs-24{font-size: 24px;}
+.fw-l{font-weight: 200;}
+.fw-b{font-weight: 700;}
+
+    /*属性转换*/
+.dis-n{display: none;}
+.dis-b{display: block;}
+.dis-f{display: flex;}
+.dis-ib{display: inline-block;}
+.dis-if{display: inline-flex;}
+
+    /*边距*/
+.mrc-1{margin: 10px auto;}
+.mrc-2{margin: 20px auto;}
+.mrc-h{margin: 15px auto;}
+
+.mrr-0{margin-right: 0px;}
+.mrr-1{margin-right: 10px;}
+.mrr-2{margin-right: 20px;}
+.mrr-h{margin-right: 15px;}
+.mrl-0{margin-left: 0px;}
+.mrl-1{margin-left: 10px;}
+.mrl-2{margin-left: 20px;}
+.mrl-h{margin-left: 15px;}
+
+.mrt-0{margin-top: 0px;}
+.mrt-1{margin-top: 10px;}
+.mrt-2{margin-top: 20px;}
+.mrt-h{margin-top: 15px;}
+.mrb-0{margin-bottom: 0px;}
+.mrb-1{margin-bottom: 10px;}
+.mrb-2{margin-bottom: 20px;}
+.mrb-h{margin-bottom: 15px;}
+
+     /*填充*/
+.pdc-1{padding: 10px auto;}
+.pdc-2{padding: 20px auto;}
+.pdc-h{padding: 15px auto;}
+
+.pdr-1{padding-right: 10px;}
+.pdr-2{padding-right: 20px;}
+.pdr-h{padding-right: 15px;}
+.pdl-1{padding-left: 10px;}
+.pdl-2{padding-left: 20px;}
+.pdl-h{padding-left: 15px;}
+
+.pdt-1{padding-top: 10px;}
+.pdt-2{padding-top: 20px;}
+.pdt-h{padding-top: 15px;}
+.pdb-1{padding-bottom: 10px;}
+.pdb-2{padding-bottom: 20px;}
+.pdb-h{padding-bottom: 15px;}
+
+     /*定位*/
+.pos-f{position: fixed;}
+.pos-r{position: relative;}
+.pos-a{position: absolute;}
+
+    /*位置*/
+.tx-c{text-align: center;}
+.tx-r{text-align: right}
+.vt-m{vertical-align: middle;}
+.vt-s{vertical-align: sub;}
+
+    /*选中*/
+.seleted {
+    background: #b4000d;
+}
