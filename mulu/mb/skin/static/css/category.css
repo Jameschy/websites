@@ -1,10 +1,11 @@
 /*
-*@name:index
-*@author:admins
-*@date:2020/11/12 18:25
-*@desc:首頁樣式表
-*@update:2020/11/12 18:25
+*@name:category.css
+*@author:JamesChy
+*@date:2020/11/20 15:39
+*@desc:admins
+*@update:2020/11/20 15:39
 */
+
 .ml-wrap{
     width: 100%;
 }
@@ -110,7 +111,7 @@
     float: left;
     line-height: 20px;
     margin-top: 7px;
-    background: url(img/t012a88ac34bfe4f63a.png) no-repeat left center;
+    background: url(../img/t012a88ac34bfe4f63a.png) no-repeat left center;
     font-size: 12.5px;
 }
 .logo_search_lei .lei_text {
@@ -180,11 +181,10 @@
     display: inline-block;
 }
 
-    /*主体*/
+/*主体*/
 .ml-main{
-    height: 1815px;
-    margin: 0 auto;
-    margin-top: 15px;
+    /*height: 1815px;*/
+    margin: 15px auto;
 }
 
 .main-c{
@@ -192,6 +192,19 @@
     margin: 15px auto;
     box-shadow: 0 0 8px #ccc;
 }
+
+
+/*面包屑*/
+.breadcrumb{
+    color: #828a92;
+    font-size: 14px;
+}
+
+.breadcrumb a{
+    color: #de1f2c;
+}
+
+
 .mc-box{
     height: 70px;
     line-height: 70px;
@@ -276,16 +289,53 @@
     border-bottom: 2px solid #dd4343;
 }
 .sec-box ul li{
-    display: inline-block;
-    float: left;
+    /*display: inline-block;*/
+    /*float: left;*/
 }
 
 .lbox-bd li{
-    width: 110px;
-    font-size: 14px;
-    line-height: 30px;
+    width: 100%;
+    /*font-size: 14px;*/
+    /*line-height: 30px;*/
+    padding: 15px 0;
+    border-bottom: 1px dotted #d5d9dc;
+}
+.item-box .item-thumb{
+    width: 20%;
 }
 
+.item-box .item-msg{
+    width: 80%;
+}
+
+.item-box .item-thumb img{
+    width: 100%;
+    max-height: 130px;
+}
+
+.item-msg h5{
+    margin-bottom: 10px;
+    color: #de1f2c;
+}
+.item-msg h5 a>b{
+    color: #b4000d;
+    font-weight: 800;
+}
+
+.item-msg .msg-zs a{
+    font-size: 16px;
+    font-weight: bold;
+}
+.item-msg .msg-qz{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.item-msg .msg-breif{
+    font-size: 14px;
+    line-height: 26px;
+    color: #828a92;
+}
 .sec-box ul li:hover a{
     color: #dd4343;
 }
@@ -306,14 +356,41 @@
     color: #dd4343;
 }
 
+
+/*分页器*/
+.item-pagetion {
+    text-align: center;
+}
+.item-pagetion span {
+    display: inline-block;
+    padding: 5px;
+    background: #b4000d;
+    color: #fff;
+    border-radius: 3px;
+    min-width: 36px;
+    border: 1px solid #b4000d;;
+}
+.item-pagetion span:hover{
+    background: #ffffff;
+    color: #b4000d;
+}
+.item-pagetion a {
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+}
+.item-pagetion span:hover a {
+    color: #b4000d;
+}
+
+
 .main-r {
 
 }
 
 .info-box{
-     border-bottom: 1px dotted #d5d9dc;
-     margin: 5px auto;
- }
+    margin: 5px auto;
+}
 
 .info-box li{
     font-size: 12px;
@@ -342,11 +419,13 @@
     font-size: 14px;
     line-height: 30px;
 }
+.news-box li a{
+    font-size:14px ;
+}
 .lbox2{
     /*padding: 15px 15px;*/
 }
 .lbox2 .sec-box{
-
     margin: 0 auto;
     font-size: 14px;
     line-height: 30px;
@@ -374,6 +453,53 @@
     color: #b4000d;
 }
 
+
+
+/*热门网址*/
+.hots-box{
+    border-bottom: 1px dotted #d5d9dc;
+}
+
+.hots-box ul li{
+    padding-left: 20px;
+    background-image: url("../img/shuzi.png");
+    background-repeat: no-repeat;
+    background-position-x: -2px;
+}
+
+.hots-box ul li:nth-child(1){
+    background-position-y: 1px;
+}
+.hots-box ul li:nth-child(2){
+    background-position-y: -27px;
+}
+.hots-box ul li:nth-child(3){
+    background-position-y: -56px;
+}
+.hots-box ul li:nth-child(4){
+    background-position-y: -85px;
+}
+.hots-box ul li:nth-child(5){
+    background-position-y: -115px;
+}
+.hots-box ul li:nth-child(6){
+    background-position-y: -143px;
+}
+.hots-box ul li:nth-child(7){
+    background-position-y: -172px;
+}
+.hots-box ul li:nth-child(8){
+    background-position-y: -200px;
+}
+.hots-box ul li:nth-child(9){
+    background-position-y: -230px;
+}
+.hots-box ul li:nth-child(10){
+    background-position-y: -258px;
+}
+
+
+
 /*第二段右侧模块*/
 .rbox2{
 
@@ -383,6 +509,10 @@
     padding: 15px 0;
 }
 
+
+.tags-box ul li{
+    display: inline-block;
+}
 .rbox2 .info-box li{
     padding: 2px 5px;
     margin: 5px 5px;
@@ -402,7 +532,7 @@
     display: inline-flex;
     margin: 5px 8px;
 }
-    /*页底*/
+/*页底*/
 .ml-footer{
     width: 100%;
     margin: 0;
