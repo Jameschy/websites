@@ -25,6 +25,11 @@
     margin: 15px auto;
 }
 
+.sec-content .cont-table {
+    font-size: 14px;
+    color: lightslategrey;
+}
+
 .cont-table table{
     width: 100%;
 }
@@ -63,7 +68,7 @@
     font-size: 14px;
     letter-spacing: 2px;
     text-indent: 36px;
-    color: #333;
+    color: lightslategrey;
 }
 
 .cont-state {
